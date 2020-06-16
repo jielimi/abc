@@ -2,7 +2,7 @@
 
 **iModel.js**中表示iModel数据库文件的类。
 
-iModel.js类维护着一个IModelJsNative.DgnDb对象（通过nativeDb（）接口可以访问），iModel.js对外提供的大多数操作都是委托给该对象去完成。
+iModel.js类维护着一个IModelJsNative.DgnDb对象（即本机Db在内存中的句柄，通过nativeDb（）接口可以访问），iModel.js对外提供的大多数操作都是委托给该对象去完成。
 
 ---
 
