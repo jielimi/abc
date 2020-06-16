@@ -2,13 +2,9 @@
 
 **iModel.js**中表示iModel数据库文件的类。
 
-
-
 **IModelDb**具有三个子类，其中：
 
 * **BriefcaseDb**: 该类表示来自iModelHub的iModel的本地副本。BriefcaseDb引发一组事件，以允许应用程序和子系统跟踪其对象的生命周期，包括onOpen，onOpened等。
-
-
 
 * **SnapshotDb**: 该类表示iModel\(快照\)数据库文件，通常用于存档和数据传输目的。
 
