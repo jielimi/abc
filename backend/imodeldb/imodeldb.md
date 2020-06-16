@@ -4,7 +4,7 @@
 
 ---
 
-其中，每个IModelDb对象包含如下重要成员:
+其中，每个IModelDb对象包含如下重要数据成员:
 
 | models | IModelDb中的某型集合 |
 | :---: | :--- |
@@ -23,10 +23,4 @@
 * **StandaloneDb**: 该类表示的iModel数据库文件既不由iModelHub管理也不由ImodelHub进行同步读写文件。一般应用于团队协作中可能不重要单独场景。但是，StandaloneDb的设计与BriefcaseDb的API相似且一致，从而使得用户可以很容易将其升级到iModelHub。
 
 因此，根据不同的需要，可以选择使用不同的子类。
-
-
-
-
-
-
 
