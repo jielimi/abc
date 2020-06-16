@@ -7,7 +7,7 @@
 其中，每个IModelDb对象包含如下重要数据成员:
 
 | models | IModelDb中的某型集合 |
-| :---: | :--- |
+| :---: | :---: |
 | elements | IModelDb中的element集合 |
 | views | IModelDb中的视图集合 |
 | tiles | IModelDb中的瓦片集合 |
