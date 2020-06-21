@@ -14,6 +14,8 @@
   * 模型视图
     * 本地模型
     * 线上模型
+  * [基本功能](imodelweb/gong-neng.md)
+  * API
 * 部署
 * [Frontend](chapter1.md)
   * [接口](chapter1/jie-kou.md)
