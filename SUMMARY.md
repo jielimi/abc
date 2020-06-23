@@ -46,5 +46,5 @@
   * [ElementAspects](backend/elementaspects/elementaspects.md)
     * [创建ElementAspects](backend/elementaspects/chuang-jian-elementaspects.md)
     * [访问ElementAspects](backend/elementaspects/fangwen-elementaspects.md)
-  * [View](backend/ecschema/view.md)
+  * [View](backend/view/view.md)
 
