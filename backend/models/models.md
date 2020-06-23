@@ -33,7 +33,6 @@ tryGetModelJson(modelIdArg: string): string | undefined
 //获取指定Element的子模型。
 getSubModel<T extends Model>(modeledElementId: Id64String | GuidString | Code): T
 
-
 //获取指定Element的子模型。
 tryGetSubModel<T extends Model>(modeledElementId: Id64String | GuidString | Code): T | undefined
 
