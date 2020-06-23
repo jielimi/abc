@@ -1,10 +1,12 @@
 # IModelDb.Elements
 
-该类表示iModel数据文件中所有的element的集合，通过该类可以创建，查询，更改，删除等操作具体元素。
+该类表示iModel数据文件中所有element的集合，使用该类可以对指定element执行创建，查询，更改，删除等具体操作。
 
 通过IModelDb.elements即可访问该接口。
 
-其主要包含方法如下所示\(_**仅供参考，若详细查阅，请查看相关源码，见文件IModelDb.d.ts或者IModelDb.ts**_\):
+其主要包含以下方法\(_**仅供参考，若需要了解更多，请查看相关源码，见文件IModelDb.d.ts或IModelDb.ts**_\):
+
+---
 
 ```
 //以JSON的形式从iModel读取元素数据
