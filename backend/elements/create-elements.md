@@ -6,8 +6,8 @@ Schema片段：注意用户自定义新增字段: _**city,amount**_.在后续代
   <ECEntityClass typeName="TestPhysicalElement">
         <BaseClass>bis:DefinitionElement</BaseClass>
         <ECProperty propertyName="testProperty" typeName="string"/>
-	<ECProperty propertyName="city" typeName="string" displayLabel="this is a country" />
-	<ECProperty propertyName="amount" typeName="int" displayLabel="this is an age" />
+    <ECProperty propertyName="city" typeName="string" displayLabel="this is a country" />
+    <ECProperty propertyName="amount" typeName="int" displayLabel="this is an age" />
   </ECEntityClass>
 ```
 
@@ -96,9 +96,26 @@ class ElementTest {
     }
   }
   public QueryElement() {
-    const element = this.imodelDb.elements.getElement(this.elementId);
+    const element = this.imodelDb.elements.tryGetElement(this.elementId);
     if (element) {
       console.log(element.classFullName); //输出 TestBim:TestPhysicalElement
+
+      element.setJsonProperty("city", "北京");
+      element.update(); //只有调用了这个函数，才会更新到imodel数据文件。
+      console.log(element.getJsonProperty("city"));
+      const e = this.imodelDb.elements.tryGetElement(this.elementId);
+      if (e) {
+        console.log(e.getJsonProperty("city")); //输出 北京
+      } else {
+        console.log("element已经被删除");
+      }
+      element.delete();
+      const e2 = this.imodelDb.elements.tryGetElement(this.elementId);
+      if (e2) {
+        console.log("element 还在");
+      } else {
+        console.log("element已经被删除");
+      }
     }
   }
   //测试驱动函数入口
@@ -119,7 +136,6 @@ class ElementTest {
   private imodelDb: SnapshotDb; //打开的bim文件在内存中的对象;
 }
 export { ElementTest };
-
 ```
 
 
