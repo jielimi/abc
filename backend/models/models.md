@@ -1,3 +1,7 @@
+# Model
+
+模型是元素的集合，所有这些元素都是从单个视角进行的。那些元素共同地对某个实体建模，该实体比“模型”中包含的元素所建模的实体“更大”。例如，一个包含PhysicalElements的PhysicalModel，该PhysicalElements对汽车零件的物理形式进行建模。它们共同对整个汽车的物理实体进行建模。
+
 # IModelDb.Models
 
 该类表示iModel数据文件中所有model的集合，使用该类可以对指定model执行创建，查询，更改，删除等具体操作。
