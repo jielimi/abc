@@ -12,7 +12,7 @@
   * 版本管理
     * 源文件
   * 模型视图
-    * 线上模型
+    * [线上模型](imodelweb/xian-shang-mo-xing.md)
     * [本地模型](imodelweb/ben-di-mo-xing.md)
   * [基本功能](imodelweb/gong-neng.md)
   * [API](imodelweb/api.md)
