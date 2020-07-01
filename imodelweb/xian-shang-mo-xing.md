@@ -1,10 +1,10 @@
 ## 打开iModelBank模型：
 
-`IModelConnection.open`
+`IModelConnection.open`
 
-`通过ScreenViewport.create()创建一个viewport `
+`通过ScreenViewport.create()创建一个viewport`
 
-`通过IModelApp.viewManager.addViewport(this.theViewPort);将创建的的viewport添加到渲染列表中`
+`通过IModelApp.viewManager.addViewport(this.theViewPort);将创建的的viewport添加到渲染列表中`
 
 
 

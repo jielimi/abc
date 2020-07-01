@@ -1,6 +1,8 @@
 # Summary
 
 * [创建环境](README.md)
+  * [iModel Bridges](imodel-bridges.md)
+  * 常见问题
 * 支持平台
 * [应用程序结构](ying-yong-cheng-xu-jie-gou.md)
   * 前端
