@@ -14,6 +14,8 @@ iModel.js中主要包含三类element：
 
 **InformationContentElement**：信息内容元素，是建模纯信息实体的抽象基类，只有核心框架应该直接从信息内容元素子类化。行业和应用程序开发人员应该从该类最合适的子类开始使用。
 
+_更多Element子类请参考源码Element.ts文件。_
+
 # IModelDb.Elements
 
 该类表示iModel数据文件中所有element的集合，使用该类可以对指定element执行创建，查询，更改，删除等具体操作。通过IModelDb.elements即可访问该接口。
