@@ -48,5 +48,9 @@ JsonProperties有一个名为UserProps的保留名称空间。UserProps名称空
 }
 ```
 
+### JsonProperties的优点和缺点
+
+JSON属性的最大优点是它们根本不需要任何schema或预先工作。JSON属性的缺点是：没有类型安全，没有控制位任何属性名称存储什么内容的机制。没有必需的数据。对于要定义的某些属性，没有定义需求的机制。
+
 
 
