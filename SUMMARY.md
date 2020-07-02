@@ -2,11 +2,11 @@
 
 * [创建环境](README.md)
   * [iModel Bridges](imodel-bridges.md)
-  * 常见问题
+  * [常见问题](chang-jian-wen-ti.md)
 * 支持平台
 * [应用程序结构](ying-yong-cheng-xu-jie-gou.md)
-  * 前端
-    * package
+  * [前端](ying-yong-cheng-xu-jie-gou/qian-duan.md)
+    * [package](ying-yong-cheng-xu-jie-gou/qian-duan/package.md)
   * 后端
     * package
 * [ImodelWeb](imodelweb.md)
