@@ -18,3 +18,35 @@ JsonProperties成员以JSON格式保存元素上特定于实例的临时数据�
 
 为了避免命名值的冲突，JsonProperties成员的顶级名称被保留位名称空间。因此应该选择足够昌的唯一性名称空间，以避免冲突按照惯例（至少8个字符）。注意：所有JSON属性以及名称空间都是区分大小写的。
 
+The UserProps namespace
+
+JsonProperties有一个名为UserProps的保留名称空间。UserProps名称空间中的所有值都是用户添加的，应用程序代码不应该将信息存储在那里。用户应该使用自己的名称作用域规则将属性存储在名称中，比如大写前缀以避免冲突。但是，因为他们指定只有他们的数据保存在UserProps中，所以他们不需要担心与应用程序的冲突。
+
+例如，一个元素可能有以下一组JsonProperties：
+
+```js
+{
+  "SLYSOFT_props": {
+    "partType": "st-10",
+    "partName": "runner*144"
+  },
+  "IGASPEC_domFlow": {
+    "max": 100,
+    "min": 22
+  },
+  "UserProps": {
+    "BTTE_vendorInfo": {
+      "name": "Ace Manufacturing",
+      "contractId": "1032SW3"
+    },
+    "BTTE_approvals": {
+      "reviewers": ["Tom", "Justine", "Nate"],
+      "date": "2018-02-11",
+      "notes": ""
+    }
+  }
+}
+```
+
+
+
