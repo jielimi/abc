@@ -1,4 +1,4 @@
-# Element 
+# Element
 
 _注意element在此译为元素，在imodel.js种用element表示元素类。_
 
