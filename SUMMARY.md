@@ -7,8 +7,8 @@
 * [应用程序结构](ying-yong-cheng-xu-jie-gou.md)
   * [前端](ying-yong-cheng-xu-jie-gou/qian-duan.md)
     * [package](ying-yong-cheng-xu-jie-gou/qian-duan/package.md)
-  * 后端
-    * package
+  * [后端](ying-yong-cheng-xu-jie-gou/hou-duan.md)
+    * [package](ying-yong-cheng-xu-jie-gou/hou-duan/package.md)
 * [ImodelWeb](imodelweb.md)
   * 项目管理
   * 版本管理
@@ -18,7 +18,7 @@
     * [本地模型](imodelweb/ben-di-mo-xing.md)
   * [基本功能](imodelweb/gong-neng.md)
   * [API](imodelweb/api.md)
-* 部署
+* [部署](bu-shu.md)
 * [Frontend](chapter1.md)
   * [接口](chapter1/jie-kou.md)
 * [Backend](backend.md)

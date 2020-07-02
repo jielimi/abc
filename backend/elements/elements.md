@@ -1,20 +1,14 @@
 # Element
 
-	element是用于在iModel中对现实世界建模的最小的可单独识别的构建基块。每个element代表现实世界中的一个实体。元素集合
+           element是用于在iModel中对现实世界建模的最小可识别的构建基块。每个element代表现实世界中的一个实体。元素集合\(包含在Model中\)用于对表示更大范围的真实世界实体的其他element进行建模。使用这种递归建模策略，元素可以表示任何规模的实体，实体可以表示物理事物或抽象概念或仅仅是信息记录。
 
-\(包含在Model中\)用于对表示更大范围的真实世界实体的其他element进行建模。使用这种递归建模策略，元素可以表示任何规模的实
-
-体，实体可以表示物理事物或抽象概念或仅仅是信息记录。
-
-         每个元素都有一个64位id\(从Entity继承\),以在iModel中唯一标识，每个element还具有一个“code”，以标识其在现实世界中的含
-
-义。此外，element可能还具有“federationGuid”来保存GUID。iModel数据库强制执行id，code，federationGuid的唯一性。
+           每个element 都有一个64位id\(从Entity继承\)，以在iModel中唯一标识，每个element还具有一个“code”，以标识其在现实世界中的含义。此外，element可能还具有“federationGuid”来保存GUID。iModel数据库保证id，code，federationGuid的唯一性。
 
 ---
 
 # IModelDb.Elements
 
-该类表示iModel数据文件中所有element的集合，使用该类可以对指定element执行创建，查询，更改，删除等具体操作。
+          该类表示iModel数据文件中所有element的集合，使用该类可以对指定element执行创建，查询，更改，删除等具体操作。
 
 通过IModelDb.elements即可访问该接口。
 
