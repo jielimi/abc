@@ -94,7 +94,7 @@ if (e) {
     console.log(e.model); //显示包含此元素的模型的id。
     console.log(e.code.value); //显示此元素的code的codevalue值。
     console.log(e.classFullName); //显示此元素的ECClassFullName。
-    
+
     //显示元素的特有属性。
     const set = e2.settings;
     console.log(set.lights.numCels);

@@ -32,9 +32,22 @@ _注意Model在此译为模型，在imodel.js中用Model表示元素类。_
 | DefinitionModel | DefinitionElements |
 | InformationRecordModel | InformationRecordElements |
 | GroupInformationModel | GroupInformationElements |
-| DocumentListModel | Document elements |
+| DocumentListModel | Document element |
 
-1. 基本接口
+---
+
+#### 基本接口
+
+其主要包含以下方法\(_**仅供参考，若需要了解更多，请查看相关源码，见文件IModel.d.ts或IModel.ts**_\):
+
+```
+/** 将此模型插入到iModel中 */
+insert(): string;
+/**在iModel中更新此模型. */
+update(): void;
+/** 从iModel删除此模型. */
+delete(): void;
+```
 
 # 
 
