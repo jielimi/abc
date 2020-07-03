@@ -67,17 +67,17 @@ deleteAspect(aspectInstanceIds: Id64Arg): void;
 
 # 查询Element示例
 
-```
+```js
 查询元素方式一
 const e = this.imodelDb.elements.tryGetElement("0x4a");
 if (e) {
-	//显示元素的基本特性;
+    //显示元素的基本特性;
     console.log(e.model); //显示包含此元素的模型的id。
     console.log(e.code.value); //显示此元素的code的codevalue值。
     console.log(e.classFullName); //显示此元素的ECClassFullName。
-	
-	//显示元素的特有属性，首先需要将element向下转换到指定的子类。
-	const e2: DisplayStyle3d = e as DisplayStyle3d;
+
+    //显示元素的特有属性，首先需要将element向下转换到指定的子类。
+    const e2: DisplayStyle3d = e as DisplayStyle3d;
       if (e2) {
         const set = e2.settings;
         console.log(set.lights.numCels);
@@ -88,12 +88,12 @@ if (e) {
 //查询元素方式二
 const e: DisplayStyle3d | undefined = this.imodelDb.elements.tryGetElement<DisplayStyle3d>("0x4a");
 if (e) {
-	//显示元素的基本特性;
+    //显示元素的基本特性;
     console.log(e.model); //显示包含此元素的模型的id。
     console.log(e.code.value); //显示此元素的code的codevalue值。
     console.log(e.classFullName); //显示此元素的ECClassFullName。
-	//显示元素的特有属性。
-	const set = e2.settings;
+    //显示元素的特有属性。
+    const set = e2.settings;
     console.log(set.lights.numCels);
     console.log(set.backgroundColor.name);
 }
