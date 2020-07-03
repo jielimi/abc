@@ -3,7 +3,7 @@
 * [创建环境](README.md)
   * [iModel Bridges](imodel-bridges.md)
   * [常见问题](chang-jian-wen-ti.md)
-* 支持平台
+* [支持平台](zhi-chi-ping-tai.md)
 * [应用程序结构](ying-yong-cheng-xu-jie-gou.md)
   * [前端](ying-yong-cheng-xu-jie-gou/qian-duan.md)
     * [package](ying-yong-cheng-xu-jie-gou/qian-duan/package.md)
@@ -11,9 +11,9 @@
     * [package](ying-yong-cheng-xu-jie-gou/hou-duan/package.md)
 * [ImodelWeb](imodelweb.md)
   * 项目管理
-  * 版本管理
-    * 源文件
-  * 模型视图
+  * [版本管理](imodelweb/ban-ben-guan-li.md)
+    * [源文件](imodelweb/ban-ben-guan-li/yuan-wen-jian.md)
+  * [模型视图](imodelweb/mo-xing-shi-tu.md)
     * [线上模型](imodelweb/xian-shang-mo-xing.md)
     * [本地模型](imodelweb/ben-di-mo-xing.md)
   * [基本功能](imodelweb/gong-neng.md)
@@ -43,7 +43,7 @@
     * [创建Models](backend/models/create-models.md)
     * [访问Models](backend/models/fang-wen-models.md)
   * [Elements](backend/elements/elements.md)
-    * [创建Elements](backend/elements/create-elements.md)
+    * [查询Element](backend/elements/create-elements.md)
     * [访问Elements](backend/elements/fang-wenelements.md)
     * [element](backend/elements/element.md)
   * [ElementAspects](backend/elementaspects/elementaspects.md)
