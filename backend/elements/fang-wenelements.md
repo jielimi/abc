@@ -73,7 +73,8 @@ deleteAspect(aspectInstanceIds: Id64Arg): void;
 
 ```js
 查询元素方式一
-const e = this.imodelDb.elements.tryGetElement("0x4a");
+const elementId = "0x4a";//元素Id
+const e = this.imodelDb.elements.tryGetElement(elementId);
 if (e) {
     //显示元素的基本特性;
     console.log(e.model); //显示包含此元素的模型的id。
@@ -90,7 +91,8 @@ if (e) {
 }
 
 //查询元素方式二
-const e: DisplayStyle3d | undefined = this.imodelDb.elements.tryGetElement<DisplayStyle3d>("0x4a");
+const elementId = "0x4a";//元素Id
+const e: DisplayStyle3d | undefined = this.imodelDb.elements.tryGetElement<DisplayStyle3d>(elementId);
 if (e) {
     //显示元素的基本特性;
     console.log(e.model); //显示包含此元素的模型的id。

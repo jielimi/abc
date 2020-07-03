@@ -53,9 +53,11 @@ deleteModel(ids: Id64Arg): void
 
 # 查询Model示例
 
+根据模型Id可以从iModel数据文件中查询到指定的模型\(如果存在\)。具体查询方式如下所示：
+
 ```
     //查询方式一
-	const modelId = "0x38";
+    const modelId = "0x38";//模型Id
     const model = this.imodelDb.models.tryGetModel(modelId);
     if (model) {
       //显示模型基本属性;
@@ -71,9 +73,9 @@ deleteModel(ids: Id64Arg): void
         console.log(SheetModel.className);
       }
     }
-	
-	//查询方式二
-	const modelId = "0x38";
+
+    //查询方式二
+    const modelId = "0x38";//模型Id
     const model: SheetModel | undefined = this.imodelDb.models.tryGetModel<SheetModel>(modelId);
     if (model) {
       //显示模型基本属性;
