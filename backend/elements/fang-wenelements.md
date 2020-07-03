@@ -67,6 +67,8 @@ deleteAspect(aspectInstanceIds: Id64Arg): void;
 
 # 查询Element示例
 
+根据元素Id可以从iModel数据文件中查询到指定的元素\(如果存在\)。具体查询方式如下所示：
+
 ```js
 查询元素方式一
 const e = this.imodelDb.elements.tryGetElement("0x4a");
