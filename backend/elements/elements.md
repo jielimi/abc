@@ -36,6 +36,8 @@ _更多Element子类请参考源码Element.ts文件。_
 
 #### 基本接口
 
+其主要包含以下方法\(_**仅供参考，若需要了解更多，请查看相关源码，见文件Element.d.ts或IElement.ts**_\):
+
 ```
 //获取此元素的显示标签。 默认情况下返回userLabel（如果存在），否则返回代码值。
 getDisplayLabel(): string;
