@@ -12,6 +12,8 @@ _注意Model在此译为模型，在imodel.js中用Model表示元素类。_
 
 #### 基本属性
 
+Model是iModel中所有模型的基类，其基本属性如下所示:
+
 | 属性 | 描述 |
 | :---: | :---: |
 | classFullName | 模型的ECClass,格式:Schema:ClassName |
