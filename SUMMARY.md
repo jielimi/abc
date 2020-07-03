@@ -41,7 +41,7 @@
     * [Writing to an IModelDb](backend/imodeldb/writing-to-an-imodeldb.md)
   * [Models](backend/models/models.md)
     * [创建Models](backend/models/create-models.md)
-    * [访问Models](backend/models/fang-wen-models.md)
+    * [查询Model](backend/models/fang-wen-models.md)
   * [Element](backend/elements/elements.md)
     * [创建Element示例](backend/elements/create-elements.md)
     * [查询Element](backend/elements/fang-wenelements.md)
