@@ -18,9 +18,23 @@ _注意Model在此译为模型，在imodel.js中用Model表示元素类。_
 | parentModel | 模型的父模型的Id |
 | modeledElement | 模型的父模型 |
 
-1. ---
-2. 核心模型类型
-3. 基本接口
+---
+
+#### 核心模型类型
+
+具体的核心模型都为Model的子类
+
+| 核心模型子类 | 包含的元素类型 |
+| :---: | :---: |
+| PhysicalModel | PhysicalElements和SpatialLocationElements |
+| SpatialLocationModel | SpatialLocationElements |
+| DrawingModel | GeometricElement2d elements |
+| DefinitionModel | DefinitionElements |
+| InformationRecordModel | InformationRecordElements |
+| GroupInformationModel | GroupInformationElements |
+| DocumentListModel | Document elements |
+
+1. 基本接口
 
 # 
 
