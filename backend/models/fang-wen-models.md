@@ -53,5 +53,39 @@ deleteModel(ids: Id64Arg): void
 
 # 查询Model示例
 
+```
+    //查询方式一
+	const modelId = "0x38";
+    const model = this.imodelDb.models.tryGetModel(modelId);
+    if (model) {
+      //显示模型基本属性;
+      console.log("找到模型");
+      console.log(model.parentModel);
+      console.log(model.classFullName);
+      console.log(model.jsonProperties);
+
+      //显示具体模型特有属性;
+      const m2 = model as SheetModel;
+      if (m2) {
+        console.log("表单模型");
+        console.log(SheetModel.className);
+      }
+    }
+	
+	//查询方式二
+	const modelId = "0x38";
+    const model: SheetModel | undefined = this.imodelDb.models.tryGetModel<SheetModel>(modelId);
+    if (model) {
+      //显示模型基本属性;
+      console.log("找到模型");
+      console.log(model.parentModel);
+      console.log(model.classFullName);
+      console.log(model.jsonProperties);
+
+      //显示具体模型特有属性;
+      console.log(model.globalOrigin);
+    }
+```
+
 
 
