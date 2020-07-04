@@ -8,7 +8,10 @@
 | :---: | :---: |
 | Administration | IModelHost，日志 |
 | IModelDb | 打开IModelDb文件，与iModelHub同步，读写IModelDb，   并发控制，iModel转换和数据交换 |
-|  |  |
+| schema和element操作 | 根据schema创建，读写element |
+| 加载和创建Element，ElementAspects和Model | 创建/访问 Element，ElementAspects，Model |
+| ECSQL | 类SQL语句操作iModel数据文件 |
+| Code | Element标识 |
 
 权限
 
