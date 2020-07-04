@@ -30,7 +30,6 @@
     * [Code Examples](backend/ECSQL/code-examples.md)
     * [常用ECSQL查询](backend/ECSQL/frequently-used-ecsql-queries.md)
   * [管理](backend/admin/administration.md)
-    * [IModelHost](backend/admin/imodelhost.md)
     * [Logging 日志](backend/admin/logging-ri-zhi.md)
   * [IModelDb](backend/imodeldb/imodeldb.md)
     * [打开IModelDb](backend/imodeldb/da-kai-imodeldb.md)
