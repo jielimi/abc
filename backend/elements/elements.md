@@ -38,6 +38,8 @@ _更多Element子类请参考源码Element.ts文件。_
 
 #### 基本接口
 
+iModel.js元素是BIS元素的内存表示形式。使用Element对象可以轻松访问一组属性和方面。IModelDb.elements表示iModel中Elements的集合。每个iModel都包含一个“ root” Subject元素，它是所有分区的父级。可通过名为IModelDb.Elements.getRootSubject的特殊函数来访问它。您可以通过各种方式查找所有其他元素。如BIS元素基础中所述，元素由唯一ID标识，并且可能还具有代码和/或FederationGuid。如果您知道这些标识符之一，则可以非常有效地查找元素。IModelDb.Elements.getElement方法使此操作变得容易。您可以使用ECSQL查询其他属性或空间查询来发现元素的ID。
+
 其主要包含以下方法\(_**仅供参考，若需要了解更多，请查看相关源码，见文件Element.d.ts或IElement.ts**_\):
 
 ```
