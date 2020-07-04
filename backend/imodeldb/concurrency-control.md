@@ -18,5 +18,7 @@ iModel具有并发控制策略，该策略指定多个公文包如何修改模�
 
 _注意：若需要参见更多，请详见源码ConcurrencyControl.ts。_
 
-_github地址_[_https://github.com/imodeljs/imodeljs/blob/master/core/backend/src/ConcurrencyControl.ts_](https://github.com/imodeljs/imodeljs/blob/master/core/backend/src/ConcurrencyControl.ts)
+_github 源码地址_[_https://github.com/imodeljs/imodeljs/blob/master/core/backend/src/ConcurrencyControl.ts_](https://github.com/imodeljs/imodeljs/blob/master/core/backend/src/ConcurrencyControl.ts)
+
+示例代码 github地址[https://github.com/imodeljs/imodeljs/blob/master/core/backend/src/test/integration/IModelWrite.test.ts](https://github.com/imodeljs/imodeljs/blob/master/core/backend/src/test/integration/IModelWrite.test.ts)
 
