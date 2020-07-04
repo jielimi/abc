@@ -12,6 +12,7 @@
 | 加载和创建Element，ElementAspects和Model | 创建/访问 Element，ElementAspects，Model |
 | ECSQL | 类SQL语句操作iModel数据文件 |
 | Code | Element标识 |
+| 对于服务和应用后端 | 定义，实现，配置RpcInterfaces等 |
 
-权限
+
 
