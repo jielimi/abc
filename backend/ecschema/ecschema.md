@@ -71,3 +71,45 @@ _注意：\(0..\*\)表示0个或者多个，\(0..1\)表示0个或者1个。_
 
 **alias  **从引用的schema引用项目时要使用的别名。此别名通常与引用的schema中定义的别名匹配，但是可以不同。如果不同，则仅在包含ECSchemaReference的schema的上下文中有效。
 
+# ECClass {#ecclass}
+
+#### 基本概念
+
+**ECObject**中有5种类型的**ECClass**，**ECEntityClass**，**ECMixinClass**，**ECStructClass**，**ECCustomAttributeClass**和**ECRelationshipClass**。
+
+###### 每种类类型都对不同类型的对象建模。
+
+**ECEntityClass **对业务对象进行建模，这些业务对象可以单独实例化并具有一个ID。
+
+**ECStructClass **对复杂的属性类型进行建模，通常称为结构。
+
+**ECCustomAttributeClass **对应用于其他架构元素以提供其他元数据的对象进行建模。
+
+**ECRelationshipClass **对 **ECEntityClass **之间的连接进行建模。
+
+所有类都在其自己的类类型中支持继承。
+
+因此，一个**ECEntityClass**可以将另一个**ECEntityClass**作为其基类，但是不能将**ECStructClass**作为其基类。
+
+**ECRelationshipClass**仅支持单继承，而**ECEntityClass**支持使用'mixins'的有限形式的多继承。
+
+#### 通用属性
+
+**typeName **定义此ECClass的名称。必须是有效的ECName，并且在schame中的所有其他项中必须唯一。
+
+**description  **面向用户的类描述，已本地化，并可能显示在UI中。
+
+**displayLabel **本地化的显示标签，将代替GUI中的名称使用。如果未设置，将使用类的类型名称。
+
+**modifier **将类标识为抽象或密封。
+
+              有效选项包括：
+
+                        1.无（默认）–普通的，可实例化的类。对于ECRelationshipClass类型无效。
+
+                        2.抽象–抽象类，无法实例化。
+
+                        3.密封的–普通的，可实例化的类，但不能用作基础类或有子类
+
+
+
