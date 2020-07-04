@@ -4,8 +4,9 @@ IModelDb还用作暂存区域，后端可以在其中更改iModel的内容，然
 
 后端可以进行以下几种更改：
 
-1. 创建或更新元素 
+1. 创建或更新元素   
     使用IModelDb.Elements.insertElement将新元素插入IModelDb。此方法以ElementProps或其子类作为输入，它定义了新元素的类和所有必需的属性，一般模式如下所示:
+
    ```
    const elementProps: SomeBisClassProps = {
      classFullName: bisFullClassName
@@ -28,7 +29,14 @@ IModelDb还用作暂存区域，后端可以在其中更改iModel的内容，然
        return iModelDb.elements.insertElement(props);
      }
    ```
+
 2. 创建或更新模型
+   要将新模型插入到iModelDb中：
+
+       1.创建并插入建模元素。
+
+       2.参照建模元素创建并插入模型。
+
 3. 储备码
 
 使用IModelDb.saveChanges可以在本地提交更改。
