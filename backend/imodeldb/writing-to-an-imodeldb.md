@@ -46,9 +46,7 @@ IModelDb还用作暂存区域，后端可以在其中更改iModel的内容，然
 
    储备码
 
-   ```
-   Code是BIS Code的内存表示形式。可以通过设置Element.code属性，然后插入或更新元素，将Code分配给元素。
-   ```
+Code是BIS Code的内存表示形式。可以通过设置Element.code属性，然后插入或更新元素，将Code分配给元素。
 
 
 
