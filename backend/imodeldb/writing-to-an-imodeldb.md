@@ -1,4 +1,4 @@
-# 读写iModelDb
+# 写iModelDb
 
 IModelDb还用作暂存区域，后端可以在其中更改iModel的内容，然后将更改提交给iModelHub。
 

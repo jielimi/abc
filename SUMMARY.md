@@ -37,7 +37,7 @@
     * [并发控制](backend/imodeldb/concurrency-control.md)
     * [imodel转换与数据交换](backend/imodeldb/imodelshu-ju-zhuan-huan-yu-jiao-hu.md)
     * [同步iModelHub](backend/imodeldb/tong-bu-imodelhub.md)
-    * [读写 IModelDb](backend/imodeldb/writing-to-an-imodeldb.md)
+    * [写 IModelDb](backend/imodeldb/writing-to-an-imodeldb.md)
   * [Models](backend/models/models.md)
     * [创建Models](backend/models/create-models.md)
     * [查询Model](backend/models/fang-wen-models.md)
