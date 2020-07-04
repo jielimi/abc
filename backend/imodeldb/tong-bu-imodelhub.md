@@ -1,2 +1,10 @@
-4444
+# 同步iModelHub
+
+作为本地briefcase，BriefcaseDb代表iModel的版本。公文包通过ChangeSets同步。使用BriefcaseDb.pullAndMergeChanges更新本地的BriefcaseDb以合并其他用户最近所做的更改。这将pull所有新的ChangeSet并将它们merge到公文包文件中。如果存在任何本地更改，它们将基于合并的ChangeSet的更改重新建立基础。_注意：此过程类似于github。_
+
+
+
+使用AutoPush将本地更改自动推送到指定的IModel。为此，创建一个AutoPush对象，指定应监视的BriefcaseDb。实例进行注册以对事件和计时器做出反应。通常，打开BriefcaseDb进行读写时，后端将开始自动推动。
+
+_详见AutoPush的imodel.js源码AutoPush.ts。_
 
