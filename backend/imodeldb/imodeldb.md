@@ -10,9 +10,9 @@ iModel.js类维护着一个IModelJsNative.DgnDb对象（即本机Db在内存中�
 
 | models | IModelDb中的某型集合 |
 | :---: | :---: |
-| elements | IModelDb中的element集合 |
-| views | IModelDb中的视图集合 |
-| tiles | IModelDb中的瓦片集合 |
+| **elements** | IModelDb中的element集合 |
+| **views** | IModelDb中的视图集合 |
+| **tiles** | IModelDb中的瓦片集合 |
 
 ---
 
@@ -25,4 +25,8 @@ iModel.js类维护着一个IModelJsNative.DgnDb对象（即本机Db在内存中�
 * **StandaloneDb**: 该类表示的iModel数据库文件既不由iModelHub管理也不由ImodelHub进行同步读写文件。一般应用于团队协作中可能不重要单独场景。但是，StandaloneDb的设计与BriefcaseDb的API相似且一致，从而使得用户可以很容易将其升级到iModelHub。
 
 因此，根据不同的需要，可以选择使用不同的子类。
+
+
+
+                      ![](/assets/imodelDB.png)
 
