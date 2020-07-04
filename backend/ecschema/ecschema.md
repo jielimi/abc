@@ -71,6 +71,8 @@ _注意：\(0..\*\)表示0个或者多个，\(0..1\)表示0个或者1个。_
 
 **alias  **从引用的schema引用项目时要使用的别名。此别名通常与引用的schema中定义的别名匹配，但是可以不同。如果不同，则仅在包含ECSchemaReference的schema的上下文中有效。
 
+---
+
 # ECClass {#ecclass}
 
 #### 基本概念
@@ -93,6 +95,8 @@ _注意：\(0..\*\)表示0个或者多个，\(0..1\)表示0个或者1个。_
 
 **ECRelationshipClass**仅支持单继承，而**ECEntityClass**支持使用'mixins'的有限形式的多继承。
 
+---
+
 #### 通用属性
 
 **typeName **定义此ECClass的名称。必须是有效的ECName，并且在schame中的所有其他项中必须唯一。
@@ -103,13 +107,68 @@ _注意：\(0..\*\)表示0个或者多个，\(0..1\)表示0个或者1个。_
 
 **modifier **将类标识为抽象或密封。
 
-              有效选项包括：
+```
+          有效选项包括：
 
-                        1.无（默认）–普通的，可实例化的类。对于ECRelationshipClass类型无效。
+                    1.无（默认）–普通的，可实例化的类。对于ECRelationshipClass类型无效。
 
-                        2.抽象–抽象类，无法实例化。
+                    2.抽象–抽象类，无法实例化。
 
-                        3.密封的–普通的，可实例化的类，但不能用作基础类或有子类
+                    3.密封的–普通的，可实例化的类，但不能用作基础类或有子类
+```
 
+---
 
+#### 自定义属性
+
+ECClass可以应用自定义属性，并继承应用于其基类的自定义属性。可以通过将相同的自定义属性应用于派生类来覆盖应用于基类的自定义属性。
+
+---
+
+#### Common Sub-Elements
+
+| 项 | 描述 |
+| :---: | :---: |
+| ECCustomAttributes | \(0..1\) |
+|  | \(0..\*\)基类的多样性取决于各个ECClass类型。 |
+| ECPrimitiveProperty | \(0..\*\) |
+| ECStructProperty | \(0..\*\) |
+| ECArrayProperty | \(0..\*\) |
+| ECStructArrayProperty | \(0..\*\) |
+
+_注意：\(0..\*\)表示0个或者多个，\(0..1\)表示0个或者1个。_
+
+---
+
+#### 基本ECClass的遍历顺序
+
+为了所有目的，以深度优先的方式遍历基类，包括属性继承（以及给定名为ECProperty的“wins”的首次出现）。
+
+例如，给定以下ECClass定义集：
+
+```
+<ECEntityClass typeName="Root"/> //Defines a property "A"
+
+<ECEntityClass typeName="B1">
+  <BaseClass>Root</BaseClass>
+</ECEntityClass>
+
+<ECEntityClass typeName="B2"/> // Defines a property "A"
+
+<ECEntityClass typeName="Foo">
+  <BaseClass>B1</BaseClass>
+  <BaseClass>B2</BaseClass>
+</ECEntityClass>
+```
+
+遍历顺序为：Foo，B1，Root，B2，并且Root对属性“ A”的定义将“获胜”，但是如果Foo首先定义为B2：
+
+```
+<ECEntityClass typeName="Foo">
+  <BaseClass>B2</BaseClass>
+  <BaseClass>B1</BaseClass>
+</ECEntityClass>
+```
+
+遍历顺序为：Foo，B2，B1，Bot和B2对属性“ A”的定义将“获胜”。如果我们通过添加“ Root”作为B2的BaseClass通过多重继承引入“菱形模式”，则遍历顺序（使用我们对Foo的第二个定义）将为：Foo，B2，Root，B1，Root。如果多态算法正在寻找“ Root”的子类，则它将在第一次到达“ Root”时停止。
 
