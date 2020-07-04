@@ -58,9 +58,15 @@ ModelCloneContext类提供了iModel转换所需的核心克隆功能。它还维
 
 ## IModelTransformer类
 
+当ETL工作流程中的源和目标都是/不同的iModel且中间需要某种数据转换时，将使用IModelTransformer基类。IModelTransformer的实例包含IModelExporter，IModelImporter和IModelCloneContext的实例。这意味着可以在整个ETL过程的导出阶段，转换阶段和导入阶段进行定制。
 
+可能的转换包括：
 
-
+1. 克隆-从源复制实体并为目标重新映射其内部ID
+2. 过滤-从目标中排除源中包含的数据
+3. 增强-在转换期间为不属于源的目标生成数据
+4. 模式映射-转换期间将类和属性映射到新模式
+5. 变更压缩-每个iModel都有自己的变更分类帐，因此可以将源中的多个变更集压缩为一个到目标的变更集
 
 
 
