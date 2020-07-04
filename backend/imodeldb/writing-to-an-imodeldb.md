@@ -30,7 +30,9 @@ IModelDb还用作暂存区域，后端可以在其中更改iModel的内容，然
      }
    ```
 
-2. 创建或更新模型  
+2. ---
+
+   创建或更新模型  
    要将新模型插入到iModelDb中：创建并插入建模元素或参照建模元素创建并插入模型。
 
    ```
@@ -40,13 +42,17 @@ IModelDb还用作暂存区域，后端可以在其中更改iModel的内容，然
     PhysicalModel.insert
    ```
 
-3. 储备码
+3. ---
 
-       Code是BIS Code的内存表示形式。可以通过设置Element.code属性，然后插入或更新元素，将Code分配给元素。
+   储备码
 
-使用IModelDb.saveChanges可以在本地提交更改。
+   ```
+   Code是BIS Code的内存表示形式。可以通过设置Element.code属性，然后插入或更新元素，将Code分配给元素。
+   ```
 
-IModelDb.txns管理本地事务，它支持本地撤消/重做。
+
+
+使用IModelDb.saveChanges可以在本地提交更改;IModelDb.txns管理本地事务，它支持本地撤消/重做。
 
 # 将更改推送到iModelHub
 
