@@ -4,6 +4,38 @@
 
 通过IModelDb.models即可访问该接口。
 
+模型是BIS模型的内存表示形式。IModelDb.Models类表示iModel中的模型集合。
+
+它具有查找模型ID和加载模型对象的方法。
+
+  
+
+
+  
+
+
+您通常不需要将Model对象加载到内存中。
+
+模型对象不包含属性。
+
+模型的属性由关联的建模元素保留。
+
+  
+
+
+  
+
+
+IModelDb.Models.getSubModel和IModelDb.Models.tryGetSubModel是通过建模元素的ID，代码或Guid查找模型的便捷方法。
+
+  
+
+
+  
+
+
+Element.model是包含元素的模型的ID。
+
 其主要包含以下方法\(_**仅供参考，若需要了解更多，请查看相关源码，见文件IModelDb.d.ts或IModelDb.ts**_\):
 
 ---
