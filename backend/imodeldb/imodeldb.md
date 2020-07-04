@@ -26,7 +26,9 @@ iModel.js类维护着一个IModelJsNative.DgnDb对象（即本机Db在内存中�
 
 因此，根据不同的需要，可以选择使用不同的子类。
 
+![](/assets/imodeldb.png)
 
 
-                      ![](/assets/imodelDB.png)
+
+
 
