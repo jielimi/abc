@@ -15,6 +15,32 @@ SnapshotDb类还提供了用于打开，关闭和访问iModel快照的方法。�
 1. 使用SnapshotDb.openFile打开现有的快照iModel。
 2. 使用SnapshotDb.close关闭快照iModel。
 
+创建一个SnapShotDb本地文件并插入一个元素代码示例:
+
+```
+	//创建一个模型
+   const imodel = SnapshotDb.createEmpty(iModelPath, { rootSubject: { name: "UrlLinkTest" } });
+    const linkProps: RepositoryLinkProps = {
+      description: "This is a test repository link",
+      url: "http://imodeljs.org",
+      repositoryGuid: Guid.createValue(),
+      classFullName: RepositoryLink.classFullName,
+      code: RepositoryLink.createCode(imodel, IModel.repositoryModelId, "MyTestValue"),
+      model: IModel.repositoryModelId,
+    };
+
+    const linkElement = imodel.elements.createElement(linkProps);
+    const id = imodel.elements.insertElement(linkElement);
+    assert.isTrue(Id64.isValidId64(id), "insert worked");
+    imodel.saveChanges();
+
+    // 验证插入的元素属性
+    const actualValue = imodel.elements.getElementProps<RepositoryLink>(id);
+    assert.equal(actualValue.url, linkProps.url, "Repository link url not set as expected");
+    assert.equal(actualValue.description, linkProps.description, "Repository link description not set as expected");
+    assert.equal(actualValue.repositoryGuid, linkProps.repositoryGuid, "Repository link guid not set as expected.");
+```
+
 ---
 
 # 打开 StandaloneDb 文件
