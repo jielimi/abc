@@ -25,14 +25,51 @@ ECSchema是所有其他ECObject项的根容器，并为其包含的每个项提�
     const locater = new StubSchemaXmlFileLocater();
     const schema: Schema = locater.loadSchema(SchemaFilePath);//加载schema xml文件
     if (schema) {
-	//查看schema属性
+    //查看schema属性
       console.log(schema.alias);
       console.log(schema.description);
       console.log(schema.readVersion);
       console.log(schema.writeVersion);
       console.log(schema.minorVersion);
-    } 
+    }
 ```
+
+#### Sub-Elements
+
+schema中可以包含以下内容：
+
+| 项 | 描述 |
+| :---: | :---: |
+| ECSchemaReference | \(0..\*\) |
+| ECCustomAttributes | \(0..1\) |
+| ECEntityClass | \(0..\*\) |
+| ECMixinClass | \(0..\*\) |
+| ECStructClass | \(0..\*\) |
+| ECCustomAttributeClass | \(0..\*\) |
+| ECRelationshipClass | \(0..\*\) |
+| ECEnumeration | \(0..\*\) |
+| KindOfQuantity | \(0..\*\) |
+| PropertyCategory | \(0..\*\) |
+
+_注意：\(0..\*\)表示0个或者多个，\(0..1\)表示0个或者1个。_
+
+# ECSchemaReference {#ecschemareference}
+
+包含所有信息以标识引用的schema，不支持循环引用，这将导致无法以循环方式加载schema。
+
+**属性**
+
+**name   **被引用的ECSchema的名称,必须与引用schema的schema名称匹配。
+
+**version   **被参考的ECSchema版本。使用“最新兼容匹配”来定位参考的schema，在该版本中，读取和写入版本必须匹配，并且所定位schema的次要版本必须等于或大于schema参考中列出的版本。
+
+**alias  **从引用的schema引用项目时要使用的别名。此别名通常与引用的schema中定义的别名匹配，但是可以不同。如果不同，则仅在包含ECSchemaReference的schema的上下文中有效。
+
+  
+
+
+  
+
 
 
 
