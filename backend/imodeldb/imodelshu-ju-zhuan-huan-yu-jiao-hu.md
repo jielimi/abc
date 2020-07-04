@@ -44,5 +44,23 @@
       }
     }
 
+## IModelImporter类
+
+当ETL工作流程中的目标是iModel时，将使用IModelImporter基类。尽管可以使用标准IModelDb API将数据导入到iModel中，但IModelImporter类提供以下功能：
+
+1. 当使用IModelImporter插入，更新或删除实体时，将进行回调。只需重写受保护的onInsert \*，onUpdate \*或onDelete \*方法。
+2. （可选）在导入过程中自动扩展IModel.projectExtents
+3. 与IModelTransformer集成
+
+## IModelCloneContext类
+
+ModelCloneContext类提供了iModel转换所需的核心克隆功能。它还维护sourceId-&gt;targetId映射，这是成功将Entity实例从源iModel克隆到目标iModel所必需的。iModel实体彼此高度相关。因此，克隆实体意味着复制对象图并将其源引用（Id）重新映射到其他目标实体。
+
+## IModelTransformer类
+
+
+
+
+
 
 
