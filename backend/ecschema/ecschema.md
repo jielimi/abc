@@ -1,6 +1,6 @@
 # ECSchema
 
-ECSchema是所有其他ECObject项的根容器，并为其包含的每个项提供名称空间。一个schema可以由另一个schema引用，但不能嵌入另一个schema内。因此，ECObjects中的名称空间没有层次结构。
+ECSchema是所有其他ECObject项的根容器，并为其包含的每个项提供名称空间。一个schema可以由另一个schema引用，但不能嵌入另一个schema内。因此，ECObjects中的名称空间没有层次结构。_更多内容请参考源代码见文件ecschema-locaters和ecschema-metadata。_
 
 ---
 
