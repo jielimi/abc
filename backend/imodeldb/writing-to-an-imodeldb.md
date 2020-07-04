@@ -34,9 +34,10 @@ IModelDb还用作暂存区域，后端可以在其中更改iModel的内容，然
    要将新模型插入到iModelDb中：创建并插入建模元素或参照建模元素创建并插入模型。
 
    ```
-   See DefinitionModel.insert
+   示例参见:
+     DefinitionModel.insert
 
-   See PhysicalModel.insert
+    PhysicalModel.insert
    ```
 
 3. 储备码
