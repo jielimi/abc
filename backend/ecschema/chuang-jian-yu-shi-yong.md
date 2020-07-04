@@ -40,8 +40,8 @@ interface CustomProp extends DefinitionElementProps {
 
 class ElementTest {
   public constructor() {
-    const seedBimFilePath = "D:\\iModel-Study\\1\\Seed.bim";
-    const exampleBimFilePath = "D:\\iModel-Study\\1\\test.bim";
+    const seedBimFilePath = "D:\\Seed.bim";
+    const exampleBimFilePath = "D:\\test.bim";
 
     this.imodelDb = createSnapshotFromSeed(seedBimFilePath, exampleBimFilePath);
     this.elementId = "";
@@ -66,7 +66,7 @@ class ElementTest {
   }
   private async ImportExampleSchema() {
     const SchemaFilePath =
-      "D:\\iModel-Study\\console-imodel\\TestBim.ecschema.xml";
+      "D:\\TestBim.ecschema.xml";
     const requestContext = new BackendRequestContext();
     await this.imodelDb.importSchemas(requestContext, [SchemaFilePath]);
   }
