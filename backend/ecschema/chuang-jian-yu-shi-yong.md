@@ -69,6 +69,7 @@ class ElementTest {
       "D:\\TestBim.ecschema.xml";
     const requestContext = new BackendRequestContext();
     await this.imodelDb.importSchemas(requestContext, [SchemaFilePath]);
+    const schemaVersion = this.imodelDb.querySchemaVersion("TestBim");//查询Schema的版本号;
   }
   public CloseIModelDb() {
     //关闭打开的imodel数据文件对象
