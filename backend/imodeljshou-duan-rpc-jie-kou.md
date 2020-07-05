@@ -100,7 +100,7 @@
 
 ### IModelTileRpcInterface
 
-| 接口 | 属性 |
+| 接口 | 描述 |
 | :---: | :---: |
 | getTileCacheContainerUrl\( IModelRpcProps, CloudStorageContainerDescriptor\) |  |
 | requestTileTreeProps\( IModelRpcProps,  string\) | 请求。 |
