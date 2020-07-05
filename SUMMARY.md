@@ -44,5 +44,4 @@
     * [创建Element示例](backend/elements/create-elements.md)
     * [查询Element](backend/elements/fang-wenelements.md)
   * [View](backend/view/view.md)
-    * [代码实例](backend/view/view/dai-ma-shi-li.md)
 
