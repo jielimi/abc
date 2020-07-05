@@ -18,6 +18,8 @@ SELECT Model, CodeValue, Parent FROM BisCore.Element
 SELECT Model, CodeValue, Parent FROM bis.Element
 ```
 
+---
+
 ### ECSQL参数
 
 在准备好后将值绑定到ECSQL语句时，支持以下参数占位符。
@@ -34,6 +36,8 @@ SELECT ECInstanceId FROM bis.GeometricElement3d WHERE Model=? AND LastMod>=?
 SELECT ECInstanceId FROM bis.GeometricElement3d LIMIT :pagesize OFFSET (:pageno * :pagesize)
 ```
 
+---
+
 ### ECInstanceId and ECClassId
 
 ECSQL定义了一组内置系统属性,它们不必在ECSchemas中定义。
@@ -48,6 +52,8 @@ ECSQL定义了一组内置系统属性,它们不必在ECSchemas中定义。
 ```
 SELECT Parent, ECClassId FROM bis.Element WHERE ECInstanceId=123
 ```
+
+---
 
 ### ECSQL中的基本数据类型
 
@@ -64,10 +70,10 @@ ECSQL支持EC内置的所有原始类型。这意味着，除了SQL-92中的基�
 
 _备注:_
 
-_DATE 'yyyy-mm-dd'        
+_DATE 'yyyy-mm-dd'          
 _
 
-_TIMESTAMP 'yyyy-mm-dd hh:mm:ss\[.nnn\]\[Z\]'        
+_TIMESTAMP 'yyyy-mm-dd hh:mm:ss\[.nnn\]\[Z\]'          
 _
 
 _TIME 'hh:mm:ss\[.nnn\]'_
@@ -164,6 +170,8 @@ SELECT PhoneNumbers FROM myschema.Company WHERE Name='ACME'//返回ACME公司的
 SELECT Name FROM myschema.Company WHERE PhoneNumbers=?//返回与绑定的PhoneNumber数组匹配的公司。 该数组必须绑定为一个整体。
 ```
 
+---
+
 ### 导航属性
 
 导航属性是指向相关对象的ECProperty.它们始终由ECRelationshipClass支持。在ECSQL的上下文中，导航属性被解释为由以下系统属性组成的结构：
@@ -180,6 +188,8 @@ SELECT Parent FROM bis.Element WHERE ECInstanceId=?//整体返回Parent导航属
 SELECT Parent.Id FROM bis.Element WHERE ECInstanceId=?//仅返回父级导航属性的Id成员
 SELECT Parent.Id, Parent.RelECClassId FROM bis.Element WHERE ECInstanceId=?//ECInstanceId =？ 以两个单独的列的形式返回ID和Parent导航属性的RelECClassId成员
 ```
+
+---
 
 ### ECRelationshipClasses
 
@@ -204,6 +214,8 @@ SELECT SourceECInstanceId FROM bis.ElementDrivesElement WHERE TargetECInstanceId
 SELECT TargetECInstanceId,TargetECClassId FROM bis.ModelHasElements WHERE SourceECInstanceId=?
 ```
 
+---
+
 ### Joins
 
 ECClass之间的连接使用标准SQL连接语法（JOIN ... ON ...或theta样式）指定。在ECSchemas中，ECRelationshipClasses用于关联两个ECClass。 因此，ECRelationshipClasses可以看作是这两个类之间的虚拟链接表。 如果要通过它们的ECRelationshipClass加入两个ECClass，则需要将第一个类加入关系类，然后再将关系类加入第二个类。如果为ECRelationship类定义了导航属性，请使用导航属性代替联接。
@@ -221,6 +233,8 @@ SELECT e.CodeValue,e.UserLabel FROM bis.Element e JOIN bis.Model m ON e.Model.Id
 SELECT Model FROM bis.Element WHERE ECInstanceId=?
 ```
 
+---
+
 ### 多态查询
 
 默认情况下，对ECSQL的FROM子句中的任何ECClass进行多态处理，即也考虑其所有子类。 如果对ECClass进行非多态处理，即仅考虑类本身而不考虑其子类，则在其前面添加ONLY关键字。这也适用于Mixins。 Mixins从技术上讲是ECClass（准确地说是抽象实体ECClass）。 因此，您可以简单地针对mixin类进行查询，而无需知道哪些类实际实现了mixin。
@@ -230,6 +244,8 @@ SELECT Model FROM bis.Element WHERE ECInstanceId=?
     `SELECT ECInstanceId FROM bis.Element WHERE Model=?``//返回指定模型中任何子类的所有元素返回指定模型中任何子类的所有元素
     `SELECT ECInstanceId FROM bis.SpatialViewDefinition WHERE ModelSelector=?``//为指定的ModelSelector返回SpatialViewDefinitions行及其子类的行
     `SELECT ECInstanceId FROM ONLY bis.SpatialViewDefinition WHERE ModelSelector=?``//仅返回指定ModelSelect的SpatialViewDefinitions行，而不返回其子类的行。
+
+---
 
 ### LIMIT 和 OFFSET
 
@@ -244,6 +260,8 @@ SELECT ECInstanceId,CodeValue,Parent FROM BisCore.Element WHERE Model=? LIMIT 50
 SELECT ECInstanceId,CodeValue,Parent FROM BisCore.Element WHERE Model=? LIMIT 50 OFFSET 200
 ```
 
+---
+
 ### SQL Functions
 
 可以在ECSQL中使用内置在SQLite或自定义SQL函数中的SQL函数。
@@ -253,6 +271,8 @@ SELECT ECInstanceId,CodeValue,Parent FROM BisCore.Element WHERE Model=? LIMIT 50
     SELECT substr(CodeValue,1,5) FROM bis.Element WHERE Model=?`
 
     SELECT ECInstanceId FROM bis.Element WHERE lower(UserLabel)=?`
+
+---
 
 ### 空间查询和几何函数
 
