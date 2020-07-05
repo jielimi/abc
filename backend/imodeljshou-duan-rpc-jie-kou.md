@@ -50,7 +50,7 @@
 | :---: | :---: |
 | openForRead\( IModelRpcProps\) |  |
 | close\( IModelRpcProps\) | 关闭 |
-| queryRows\(IModelRpcProps,string,any\[\]\|object,QueryLimit,QueryQuota,QueryPriority\) |  |
+| queryRows\(IModelRpcProps\) |  |
 | getModelProps\( IModelRpcProps,  Id64String\[\]\) | 查询指定id的模型的属性。 |
 | queryModelRanges\( IModelRpcProps,  Id64String\[\]\) |  |
 | queryModelProps（IModelRpcProps,  EntityQueryParams\) |  |
