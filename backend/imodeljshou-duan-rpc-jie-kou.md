@@ -155,10 +155,10 @@
 
 | 接口 | 描述 |
 | :---: | :---: |
-| ping\(\_iModelToken: IModelRpcProps\): Promise&lt;boolean&gt; | 发送ping，如果后端收到ping，则返回true |
-| stats\(\_iModelToken: IModelRpcProps, \_options: DevToolsStatsOptions\): Promise&lt;any&gt; | 返回具有后端性能和内存统计信息的JSON对象 |
-| versions\(\_iModelToken: IModelRpcProps\): Promise&lt;any&gt; | 返回后端版本（应用程序和iModelJs）的JSON对象 |
-| setLogLevel\(\_iModelToken: IModelRpcProps, \_loggerCategory: string, \_logLevel: LogLevel\): Promise&lt;LogLevel \| undefined&gt; | 为指定的类别设置新的日志级别并返回旧的日志级别 |
+| ping\(IModelRpcProps\) | 发送ping，如果后端收到ping，则返回true |
+| stats\(IModelRpcProps,  DevToolsStatsOptions\) | 返回具有后端性能和内存统计信息的JSON对象 |
+| versions\(\_iModelToken: IModelRpcProps\) | 返回后端版本（应用程序和iModelJs）的JSON对象 |
+| setLogLevel\( IModelRpcProps, string,  LogLevel\) | 为指定的类别设置新的日志级别并返回旧的日志级别 |
 
 
 
