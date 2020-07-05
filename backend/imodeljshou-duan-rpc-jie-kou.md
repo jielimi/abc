@@ -28,6 +28,28 @@
 | getGeoCoordinatesFromIModelCoordinates\(\_iModelToken: IModelRpcProps, \_props: string\): Promise&lt;GeoCoordinatesResponseProps&gt; |  |
 | getGeometrySummary\(\_iModelToken: IModelRpcProps, \_props: GeometrySummaryRequestProps\): Promise&lt;string&gt; |  |
 
+### IModelWriteRpcInterface
+
+该接口用于写入iModel，所有操作都需要读写访问。\(此接口通常不直接使用。 有关从前端访问iModel的更高级，更方便的API，请参见IModelConnection。\)
+
+| openForWrite\(\_iModelToken: IModelRpcProps\): Promise&lt;IModelConnectionProps&gt; |  |
+| :--- | :--- |
+| saveChanges\(\_iModelToken: IModelRpcProps, \_description?: string\): Promise&lt;void&gt; |  |
+| hasUnsavedChanges\(\_iModelToken: IModelRpcProps\): Promise&lt;boolean&gt; |  |
+| hasPendingTxns\(\_iModelToken: IModelRpcProps\): Promise&lt;boolean&gt; |  |
+| updateProjectExtents\(\_iModelToken: IModelRpcProps, \_newExtents: AxisAlignedBox3dProps\): Promise&lt;void&gt; |  |
+| saveThumbnail\(\_iModelToken: IModelRpcProps, \_val: Uint8Array\): Promise&lt;void&gt;  |  |
+| requestResources\(\_tokenProps: IModelRpcProps, \_elementIds: Id64Array, \_modelIds: Id64Array, \_opcode: DbOpcode\): Promise&lt;void&gt; |  |
+| doConcurrencyControlRequest\(\_tokenProps: IModelRpcProps\): Promise&lt;void&gt; |  |
+| lockModel\(\_tokenProps: IModelRpcProps, \_modelId: Id64String, \_level: LockLevel\): Promise&lt;void&gt; |  |
+| synchConcurrencyControlResourcesCache\(\_tokenProps: IModelRpcProps\): Promise&lt;void&gt; |  |
+| pullMergePush\(\_tokenProps: IModelRpcProps, \_comment: string, \_doPush: boolean\): Promise&lt;GuidString&gt; |  |
+| getModelsAffectedByWrites\(\_tokenProps: IModelRpcProps\): Promise&lt;Id64String\[\]&gt; |  |
+| getParentChangeset\(\_iModelToken: IModelRpcProps\): Promise&lt;string&gt; |  |
+| deleteElements\(\_tokenProps: IModelRpcProps, \_ids: Id64Array\): Promise&lt;void&gt; |  |
+| createAndInsertPhysicalModel\(\_tokenProps: IModelRpcProps, \_newModelCode: CodeProps, \_privateModel: boolean\): Promise&lt;Id64String&gt; |  |
+| createAndInsertSpatialCategory\(\_tokenProps: IModelRpcProps, \_scopeModelId: Id64String, \_categoryName: string, \_appearance: SubCategoryAppearance.Props\): Promise&lt;Id64String&gt; |  |
+
 ### IModelTileRpcInterface
 
 | 接口 | 属性 |
