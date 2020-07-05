@@ -4,3 +4,21 @@ ECSQL是基于文本的命令语言，用于对iModel或ECDb文件中的业务�
 
 ![](/assets/CSQL.png)
 
+
+
+以下所有的ECSQL示例均引用BisCore ECSchema中的类和关系（除非另有说明）。:
+
+注意：ECSQL中使用的类必须通过其schema完全限定，语法:&lt;Schema name or alias&gt;.&lt;Class name&gt;
+
+也可以使用‘ : ’作为schema和类名之间的分隔符。
+
+以下代码是等效的:
+
+```
+SELECT Model, CodeValue, Parent FROM BisCore.Element
+//这个使用schema别名：
+SELECT Model, CodeValue, Parent FROM bis.Element
+```
+
+
+
