@@ -1,5 +1,15 @@
 # iModel.js后端RPC接口
 
+### SnapshotIModelRpcInterface
+
+该接口用于snapshot \* iModels，且适用于桌面应用程序和移动产品。 不鼓励Web产品注册此接口。
+
+| 接口 | 描述 |
+| :---: | :---: |
+| openFile\(filePath: string\): Promise&lt;IModelConnectionProps&gt; |  |
+| openRemote\(key: string\): Promise&lt;IModelConnectionProps&gt; |  |
+| close\(iModelProps: IModelRpcProps\): Promise&lt;boolean&gt; |  |
+
 ### NativeAppRpcInterface
 
 该接口提供特定于本机应用程序的Rpc功能。本机应用程序是一个iModel.js应用程序，其中前端和后端进程之间存在一对一的关系。两个进程都在同一设备上执行，这可以启用离线工作流程。这样的应用可以针对特定平台-例如Electron，iOS，Android。相比之下，基于浏览器的iModel.js应用程序与平台无关，支持多个同时的前端连接，并且需要网络连接。
