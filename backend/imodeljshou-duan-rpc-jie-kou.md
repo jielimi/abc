@@ -8,7 +8,7 @@
 | :---: | :---: |
 | openFile\( string\) |  |
 | openRemote\( string\) |  |
-| close\( IModelRpcProps\) |  |
+| close\( IModelRpcProps\) | 关闭 |
 
 ---
 
@@ -38,7 +38,7 @@
 | storageSet\(string,  string,  StorageValue\) |  |
 | storageRemove\( string,  string\) |  |
 | storageKeys\( string\) |  |
-| storageRemoveAll\( string\) |  |
+| storageRemoveAll\( string\) | 储存全部删除 |
 
 ---
 
@@ -68,7 +68,7 @@
 | getMassProperties\( IModelRpcProps,  MassPropertiesRequestProps\) |  |
 | getIModelCoordinatesFromGeoCoordinates\( IModelRpcProps, string\) |  |
 | getGeoCoordinatesFromIModelCoordinates\( IModelRpcProps,  string\) |  |
-| getGeometrySummary\( IModelRpcProps,  GeometrySummaryRequestProps\) |  |
+| getGeometrySummary\( IModelRpcProps,  GeometrySummaryRequestProps\) | 获取几何摘要 |
 
 ---
 
@@ -94,7 +94,7 @@
 | getParentChangeset\( IModelRpcProps\) |  |
 | deleteElements\( IModelRpcProps, Id64Array\) | 删除指定的element。 |
 | createAndInsertPhysicalModel\( IModelRpcProps, CodeProps,  boolean\) |  |
-| createAndInsertSpatialCategory\( IModelRpcProps,  Id64String,  string,  SubCategoryAppearance.Props\) |  |
+| createAndInsertSpatialCategory\( IModelRpcProps,  Id64String,  string,  SubCategoryAppearance.Props\) | 创建并插入空间类别 |
 
 ---
 
@@ -105,7 +105,7 @@
 | getTileCacheContainerUrl\( IModelRpcProps, CloudStorageContainerDescriptor\) |  |
 | requestTileTreeProps\( IModelRpcProps,  string\) | 请求。 |
 | requestTileContent\( IModelRpcProps,  string,  string,  \(\) =&gt; boolean, guid?: string\) |  |
-| purgeTileTrees\( IModelRpcProps,  Id64Array \| undefined\) |  |
+| purgeTileTrees\( IModelRpcProps,  Id64Array \| undefined\) | 瓦片 |
 
 ---
 
@@ -128,7 +128,7 @@
 | attachChangeCache\( IModelRpcProps\) | 附加更改的缓存。 |
 | detachChangeCache\( IModelRpcProps\) |  |
 | getChangedElements\(IModelRpcProps, string,  string\) |  |
-| isChangesetProcessed\( IModelRpcProps,  string\) |  |
+| isChangesetProcessed\( IModelRpcProps,  string\) | 变更集是否已经处理 |
 
 ---
 
