@@ -18,7 +18,7 @@
 
 | 接口 | 描述 |
 | :---: | :---: |
-| log\( number,  LogLevel,  string,  string,  any\) | 将前端日志发送到后端。                                                           |
+| log\( number,  LogLevel,  string,  string,  any\) | 将前端日志发送到后端。 |
 | fetchEvents\( IModelRpcProps,  number\) | 从后端获取指定iModel的队列事件列表，直到指定的最大事件数。 |
 | checkInternetConnectivity\(\) | 检查互联网是否可以访问以及如何访问。 |
 | overrideInternetConnectivity\( OverriddenBy, ?: InternetConnectivityStatus\) | 手动覆盖Internet可达性以进行测试。 |
@@ -50,7 +50,7 @@
 | :---: | :---: |
 | openForRead\( IModelRpcProps\) |  |
 | close\( IModelRpcProps\) | 关闭 |
-| queryRows\( IModelRpcProps,  string,  any\[\] \| object, \_limit?: QueryLimit, :QueryQuota, QueryPriority\) |  |
+| queryRows\(IModelRpcProps,string,any\[\]\|object,QueryLimit,QueryQuota,QueryPriority\) |  |
 | getModelProps\( IModelRpcProps,  Id64String\[\]\) | 查询指定id的模型的属性。 |
 | queryModelRanges\( IModelRpcProps,  Id64String\[\]\) |  |
 | queryModelProps（IModelRpcProps,  EntityQueryParams\) |  |
