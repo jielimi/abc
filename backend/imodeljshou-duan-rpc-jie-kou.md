@@ -19,7 +19,7 @@
 | getViewStateData\(\_iModelToken: IModelRpcProps, \_viewDefinitionId: string\): Promise&lt;ViewStateProps&gt; |  |
 | readFontJson\(\_iModelToken: IModelRpcProps\): Promise&lt;any&gt; |  |
 | getToolTipMessage\(\_iModelToken: IModelRpcProps, \_elementId: string\): Promise&lt;string\[\]&gt; |  |
-| getViewThumbnail\(\_iModelToken: IModelRpcProps, \_viewId: string\): Promise&lt;Uint8Array&gt;  |  |
+| getViewThumbnail\(\_iModelToken: IModelRpcProps, \_viewId: string\): Promise&lt;Uint8Array&gt; |  |
 | getDefaultViewId\(\_iModelToken: IModelRpcProps\): Promise&lt;Id64String&gt; |  |
 | requestSnap\(\_iModelToken: IModelRpcProps, \_sessionId: string, \_props: SnapRequestProps\): Promise&lt;SnapResponseProps&gt; |  |
 | cancelSnap\(\_iModelToken: IModelRpcProps, \_sessionId: string\): Promise&lt;void&gt; |  |
@@ -27,6 +27,15 @@
 | getIModelCoordinatesFromGeoCoordinates\(\_iModelToken: IModelRpcProps, \_props: string\): Promise&lt;IModelCoordinatesResponseProps&gt; |  |
 | getGeoCoordinatesFromIModelCoordinates\(\_iModelToken: IModelRpcProps, \_props: string\): Promise&lt;GeoCoordinatesResponseProps&gt; |  |
 | getGeometrySummary\(\_iModelToken: IModelRpcProps, \_props: GeometrySummaryRequestProps\): Promise&lt;string&gt; |  |
+
+### IModelTileRpcInterface
+
+| 接口 | 属性 |
+| :---: | :---: |
+| getTileCacheContainerUrl\(\_tokenProps: IModelRpcProps, \_id: CloudStorageContainerDescriptor\): Promise&lt;CloudStorageContainerUrl&gt; |  |
+| requestTileTreeProps\(\_tokenProps: IModelRpcProps, \_id: string\): Promise&lt;TileTreeProps&gt; |  |
+| requestTileContent\(iModelToken: IModelRpcProps, treeId: string, contentId: string, isCanceled?: \(\) =&gt; boolean, guid?: string\): Promise&lt;Uint8Array&gt; |  |
+| async purgeTileTrees\(\_tokenProps: IModelRpcProps, \_modelIds: Id64Array \| undefined\): Promise&lt;void&gt; |  |
 
 # Editor3dRpcInterface
 
