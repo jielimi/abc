@@ -105,7 +105,7 @@
 | getTileCacheContainerUrl\( IModelRpcProps, CloudStorageContainerDescriptor\) |  |
 | requestTileTreeProps\( IModelRpcProps,  string\) | 请求。 |
 | requestTileContent\( IModelRpcProps,  string,  string,  \(\) =&gt; boolean, guid?: string\) |  |
-| purgeTileTrees\( IModelRpcProps,  Id64Array \| undefined\) | 瓦片 |
+| purgeTileTrees\( IModelRpcProps,  Id64Array \) | 瓦片 |
 
 ---
 
