@@ -57,7 +57,10 @@ ECSQL支持EC内置的所有原始类型。这意味着，除了SQL-92中的基�
 | :--- | :--- |
 | Boolean | 对于布尔类型，ECSQL支持文字True和False。 |
 | DateTime | 无时间日期DATE 有时间日期TIMESTAMP 无日期时间TIME |
-|  |  |
+| Basic functions | CURRENT\_DATE CURRENT\_TIMESTAMP CURRENT\_TIME |
+| Points  | Point是ECSchemas中的内置基本类型，在ECSQL中也支持。 |
+| Structs | 在ECSQL中,您可以整体引用结构ECProperty,也可以仅引用其某些成员。在ECSQL中引用结构成员的运算符为“.”。 |
+| Arrays | 在ECSQL中，您只能整体引用Array ECProperties。 |
 
 
 
