@@ -111,6 +111,16 @@
 
 ### WipRpcInterface
 
+此接口的目的是容纳WIP RPC方法。 例如：
+
+  \*-签名或行为仍在变化的WIP方法
+
+  \*将这些WIP RPC方法与已声明兼容性目标的其他RpcInterfaces隔离开来。
+
+  \*一旦稳定，目标就是将方法转移到他们应有的地方。
+
+  \*应用程序/服务应了解注册此RpcInterface所暗示的\* flux \*，并且在考虑使用它之前，还应同时控制客户端和服务器。
+
 | 接口 | 描述 |
 | :---: | :---: |
 | placeholder\(\_iModelToken: IModelRpcProps\): Promise&lt;string&gt; |  |
@@ -119,6 +129,8 @@
 | detachChangeCache\(\_iModelToken: IModelRpcProps\): Promise&lt;void&gt; |  |
 | getChangedElements\(\_iModelToken: IModelRpcProps, \_startChangesetId: string, \_endChangesetId: string\): Promise&lt;ChangedElements \| undefined&gt; |  |
 | isChangesetProcessed\(\_iModelToken: IModelRpcProps, \_changesetId: string\): Promise&lt;boolean&gt; |  |
+
+---
 
 ### Editor3dRpcInterface
 
