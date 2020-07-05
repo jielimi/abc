@@ -58,9 +58,111 @@ ECSQL支持EC内置的所有原始类型。这意味着，除了SQL-92中的基�
 | Boolean | 对于布尔类型，ECSQL支持文字True和False。 |
 | DateTime | 无时间日期DATE 有时间日期TIMESTAMP 无日期时间TIME |
 | Basic functions | CURRENT\_DATE CURRENT\_TIMESTAMP CURRENT\_TIME |
-| Points  | Point是ECSchemas中的内置基本类型，在ECSQL中也支持。 |
+| Points | Point是ECSchemas中的内置基本类型，在ECSQL中也支持。 |
 | Structs | 在ECSQL中,您可以整体引用结构ECProperty,也可以仅引用其某些成员。在ECSQL中引用结构成员的运算符为“.”。 |
 | Arrays | 在ECSQL中，您只能整体引用Array ECProperties。 |
+
+_备注:_
+
+_DATE 'yyyy-mm-dd'_
+
+_TIMESTAMP 'yyyy-mm-dd hh:mm:ss\[.nnn\]\[Z\]'_
+
+_TIME 'hh:mm:ss\[.nnn\]'_
+
+在ECSQL Point的上下文中，ECProperty解释为由以下系统属性组成的结构：
+
+X 	X Point2d或Point3d的坐标
+
+Y 	Y Point2d或Point3d的坐标
+
+Z 	Z Point3d的坐标
+
+---
+
+Boolean示例:
+
+```
+//使用True和False
+SELECT ECInstanceId, Model, CodeValue FROM bis.ViewDefinition3d WHERE IsCameraOn = True
+SELECT ECInstanceId, Model, CodeValue FROM bis.ViewDefinition3d WHERE IsCameraOn = False
+//布尔属性或表达式不需要与True和False比较，因为它们已经返回了布尔值。 所以上面的例子也可以这样写：
+SELECT ECInstanceId, Model, CodeValue FROM bis.ViewDefinition3d WHERE IsCameraOn
+SELECT ECInstanceId, Model, CodeValue FROM bis.ViewDefinition3d WHERE NOT IsCameraOn
+
+```
+
+---
+
+Date示例:
+
+    <ECEntityClass typeName="CalenderEntry">
+      <ECProperty propertyName="startTime" typeName="dateTime">
+        <ECCustomAttributes>
+          <DateTimeInfo xmlns="CoreCustomAttributes.01.00.01">
+            <DateTimeComponent>TimeOfDay</DateTimeComponent>
+          </DateTimeInfo>
+        </ECCustomAttributes>
+      </ECProperty>
+      <ECProperty propertyName="endTime" typeName="dateTime">
+        <ECCustomAttributes>
+          <DateTimeInfo xmlns="CoreCustomAttributes.01.00.01">
+            <DateTimeComponent>TimeOfDay</DateTimeComponent>
+          </DateTimeInfo>
+        </ECCustomAttributes>
+      </ECProperty>
+    </ECEntityClass>
+
+    SELECT ECInstanceId, Model, CodeValue FROM bis.ViewDefinition3d WHERE IsCameraOn = True
+    SELECT ECInstanceId, Model, CodeValue FROM bis.Element WHERE LastMod > DATE '2018-01-01'
+    SELECT ECInstanceId, Model, CodeValue FROM bis.Element WHERE LastMod < TIMESTAMP '2017-07-15T12:00:00.000Z'`
+    SELECT ECInstanceId, Model, CodeValue FROM bis.Element WHERE LastMod BETWEEN :startperiod AND :endperiod`
+    SELECT ECInstanceId FROM myschema.CalenderEntry WHERE startTime >= TIME '08:30:00' AND startTime <= TIME '09:00:00'
+
+---
+
+Point示例:
+
+```
+SELECT ECInstanceId, Model, CodeValue FROM bis.GeometricElement3d
+WHERE Origin.X BETWEEN 3500000.0 AND 3500500.0 AND
+Origin.Y BETWEEN 5700000.0 AND 5710000.0 AND
+Origin.Z BETWEEN 0 AND 100.0
+```
+
+---
+
+Sturcts示例:
+
+```
+<ECStructClass typeName="Address">
+  <ECProperty propertyName="Street" typeName="string" />
+  <ECProperty propertyName="City" typeName="string" />
+  <ECProperty propertyName="Zip" typeName="int" />
+</ECStructClass>
+<ECEntityClass typeName="Company">
+  <ECProperty propertyName="Name" typeName="string" />
+  <ECArrayProperty propertyName="Location" typeName="Address" />
+</ECEntityClass>
+
+SELECT Location FROM myschema.Company WHERE Name='ACME'//整体返回Location struct属性
+SELECT Name,Location.Street,Location.City FROM myschema.Company WHERE ECInstanceId=?//返回Location结构属性的Street和City成员
+SELECT Name FROM myschema.Company WHERE Location=?//返回与绑定的Location值匹配的行。 该位置必须作为一个整体进行绑定。
+SELECT Name FROM myschema.Company WHERE Location.Zip=12314//返回与位置的Zip成员值匹配的行
+
+```
+
+Array示例:
+
+```
+<ECEntityClass typeName="Company">
+  <ECProperty propertyName="Name" typeName="string" />
+  <ECArrayProperty propertyName="PhoneNumbers" typeName="string" />
+</ECEntityClass>
+
+SELECT PhoneNumbers FROM myschema.Company WHERE Name='ACME'//返回ACME公司的PhoneNumbers数组
+SELECT Name FROM myschema.Company WHERE PhoneNumbers=?//返回与绑定的PhoneNumber数组匹配的公司。 该数组必须绑定为一个整体。
+```
 
 
 
