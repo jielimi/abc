@@ -80,11 +80,11 @@
 | 接口 | 描述 |
 | :---: | :---: |
 | openForWrite\(\_iModelToken: IModelRpcProps\): Promise&lt;IModelConnectionProps&gt; |  |
-| saveChanges\(\_iModelToken: IModelRpcProps, \_description?: string\): Promise&lt;void&gt; |  |
+| saveChanges\(\_iModelToken: IModelRpcProps, \_description?: string\): Promise&lt;void&gt; | 保存更改。 |
 | hasUnsavedChanges\(\_iModelToken: IModelRpcProps\): Promise&lt;boolean&gt; |  |
 | hasPendingTxns\(\_iModelToken: IModelRpcProps\): Promise&lt;boolean&gt; |  |
 | updateProjectExtents\(\_iModelToken: IModelRpcProps, \_newExtents: AxisAlignedBox3dProps\): Promise&lt;void&gt; |  |
-| saveThumbnail\(\_iModelToken: IModelRpcProps, \_val: Uint8Array\): Promise&lt;void&gt; |  |
+| saveThumbnail\(\_iModelToken: IModelRpcProps, \_val: Uint8Array\): Promise&lt;void&gt; | 保存缩略图。 |
 | requestResources\(\_tokenProps: IModelRpcProps, \_elementIds: Id64Array, \_modelIds: Id64Array, \_opcode: DbOpcode\): Promise&lt;void&gt; |  |
 | doConcurrencyControlRequest\(\_tokenProps: IModelRpcProps\): Promise&lt;void&gt; |  |
 | lockModel\(\_tokenProps: IModelRpcProps, \_modelId: Id64String, \_level: LockLevel\): Promise&lt;void&gt; |  |
@@ -92,7 +92,7 @@
 | pullMergePush\(\_tokenProps: IModelRpcProps, \_comment: string, \_doPush: boolean\): Promise&lt;GuidString&gt; |  |
 | getModelsAffectedByWrites\(\_tokenProps: IModelRpcProps\): Promise&lt;Id64String\[\]&gt; |  |
 | getParentChangeset\(\_iModelToken: IModelRpcProps\): Promise&lt;string&gt; |  |
-| deleteElements\(\_tokenProps: IModelRpcProps, \_ids: Id64Array\): Promise&lt;void&gt; |  |
+| deleteElements\(\_tokenProps: IModelRpcProps, \_ids: Id64Array\): Promise&lt;void&gt; | 删除指定的element。 |
 | createAndInsertPhysicalModel\(\_tokenProps: IModelRpcProps, \_newModelCode: CodeProps, \_privateModel: boolean\): Promise&lt;Id64String&gt; |  |
 | createAndInsertSpatialCategory\(\_tokenProps: IModelRpcProps, \_scopeModelId: Id64String, \_categoryName: string, \_appearance: SubCategoryAppearance.Props\): Promise&lt;Id64String&gt; |  |
 
@@ -103,7 +103,7 @@
 | 接口 | 属性 |
 | :---: | :---: |
 | getTileCacheContainerUrl\(\_tokenProps: IModelRpcProps, \_id: CloudStorageContainerDescriptor\): Promise&lt;CloudStorageContainerUrl&gt; |  |
-| requestTileTreeProps\(\_tokenProps: IModelRpcProps, \_id: string\): Promise&lt;TileTreeProps&gt; |  |
+| requestTileTreeProps\(\_tokenProps: IModelRpcProps, \_id: string\): Promise&lt;TileTreeProps&gt; | 请求。 |
 | requestTileContent\(iModelToken: IModelRpcProps, treeId: string, contentId: string, isCanceled?: \(\) =&gt; boolean, guid?: string\): Promise&lt;Uint8Array&gt; |  |
 | async purgeTileTrees\(\_tokenProps: IModelRpcProps, \_modelIds: Id64Array \| undefined\): Promise&lt;void&gt; |  |
 
@@ -125,7 +125,7 @@
 | :---: | :---: |
 | placeholder\(\_iModelToken: IModelRpcProps\): Promise&lt;string&gt; |  |
 | isChangeCacheAttached\(\_iModelToken: IModelRpcProps\): Promise&lt;boolean&gt; |  |
-| attachChangeCache\(\_iModelToken: IModelRpcProps\): Promise&lt;void&gt; |  |
+| attachChangeCache\(\_iModelToken: IModelRpcProps\): Promise&lt;void&gt; | 附加更改的缓存。 |
 | detachChangeCache\(\_iModelToken: IModelRpcProps\): Promise&lt;void&gt; |  |
 | getChangedElements\(\_iModelToken: IModelRpcProps, \_startChangesetId: string, \_endChangesetId: string\): Promise&lt;ChangedElements \| undefined&gt; |  |
 | isChangesetProcessed\(\_iModelToken: IModelRpcProps, \_changesetId: string\): Promise&lt;boolean&gt; |  |
@@ -143,7 +143,7 @@
 | writeAllChangesToBriefcase\(\_tokenProps: IModelRpcProps, \_editorId: GuidString\): Promise&lt;void&gt; |  |
 | startModifyingElements\(\_tokenProps: IModelRpcProps, \_editorId: GuidString, \_elementIds: Id64Array\): Promise&lt;void&gt; |  |
 | createElement\(\_tokenProps: IModelRpcProps, \_editorId: GuidString, \_props: GeometricElement3dProps, \_origin?: Point3d, \_angles?: YawPitchRollAngles, \_geometry?: any\): Promise&lt;void&gt; |  |
-| applyTransform\(\_tokenProps: IModelRpcProps, \_editorId: GuidString, \_tprops: TransformProps\) |  |
+| applyTransform\(\_tokenProps: IModelRpcProps, \_editorId: GuidString, \_tprops: TransformProps\) | 应用矩阵变换。 |
 | pushState\(\_tokenProps: IModelRpcProps, \_editorId: GuidString\): Promise&lt;void&gt; |  |
 | popState\(\_tokenProps: IModelRpcProps, \_editorId: GuidString\): Promise&lt;void&gt; |  |
 
