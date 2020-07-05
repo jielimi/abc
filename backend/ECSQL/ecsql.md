@@ -64,10 +64,10 @@ ECSQL支持EC内置的所有原始类型。这意味着，除了SQL-92中的基�
 
 _备注:_
 
-_DATE 'yyyy-mm-dd'    
+_DATE 'yyyy-mm-dd'      
 _
 
-_TIMESTAMP 'yyyy-mm-dd hh:mm:ss\[.nnn\]\[Z\]'    
+_TIMESTAMP 'yyyy-mm-dd hh:mm:ss\[.nnn\]\[Z\]'      
 _
 
 _TIME 'hh:mm:ss\[.nnn\]'_
@@ -231,5 +231,30 @@ SELECT Model FROM bis.Element WHERE ECInstanceId=?
     `SELECT ECInstanceId FROM bis.SpatialViewDefinition WHERE ModelSelector=?``//为指定的ModelSelector返回SpatialViewDefinitions行及其子类的行
     `SELECT ECInstanceId FROM ONLY bis.SpatialViewDefinition WHERE ModelSelector=?``//仅返回指定ModelSelect的SpatialViewDefinitions行，而不返回其子类的行。
 
+### LIMIT 和 OFFSET
 
+一种实现分页的方法是在ECSQL中使用LIMIT和OFFSET子句。 LIMIT子句用于限制从ECSQL语句返回的结果数。 将LIMIT与OFFSET一起使用可以指定要返回的行范围。 在此，OFFSET指定将从结果集中省略多少行。 LIMIT指定要返回的行数。
+
+示例:
+
+```
+//仅返回前50个匹配元素：
+SELECT ECInstanceId,CodeValue,Parent FROM BisCore.Element WHERE Model=? LIMIT 50
+//返回第201至第250个匹配元素：
+SELECT ECInstanceId,CodeValue,Parent FROM BisCore.Element WHERE Model=? LIMIT 50 OFFSET 200
+```
+
+### SQL Functions
+
+可以在ECSQL中使用内置在SQLite或自定义SQL函数中的SQL函数。
+
+示例:
+
+    SELECT substr(CodeValue,1,5) FROM bis.Element WHERE Model=?`
+
+    SELECT ECInstanceId FROM bis.Element WHERE lower(UserLabel)=?`
+
+### 空间查询和几何函数
+
+ECSQL可以执行空间查询,ECSQL具有许多内置的几何函数。
 
