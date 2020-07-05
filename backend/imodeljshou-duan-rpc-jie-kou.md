@@ -9,7 +9,7 @@
 | log\(\_timestamp: number, \_level: LogLevel, \_category: string, \_message: string, \_metaData?: any\): Promise&lt;void&gt; | \*\*将前端日志发送到后端。                                                                @param            \_level指定日志级别                                               @param      \_category指定日志类别                                         @param  \_message指定日志信息                                           @param \_metaData （如果有） |
 | fetchEvents\(\_iModelToken: IModelRpcProps, \_maxToFetch: number\): Promise&lt;QueuedEvent\[\]&gt; | 从后端获取指定iModel的队列事件列表，直到指定的最大事件数。 |
 | checkInternetConnectivity\(\): Promise&lt;InternetConnectivityStatus&gt; | 检查互联网是否可以访问以及如何访问。 |
-|  overrideInternetConnectivity\(\_overriddenBy: OverriddenBy, \_status?: InternetConnectivityStatus\): Promise&lt;void&gt; | 手动覆盖Internet可达性以进行测试。 |
+| overrideInternetConnectivity\(\_overriddenBy: OverriddenBy, \_status?: InternetConnectivityStatus\): Promise&lt;void&gt; | 手动覆盖Internet可达性以进行测试。 |
 | getConfig\(\): Promise&lt;any&gt; | 从后端返回配置 |
 | cancelTileContentRequests\(\_iModelToken: IModelRpcProps, \_contentIds: TileTreeContentIds\[\]\): Promise&lt;void&gt; | 取消当前待处理或活动生成的图块内容。 |
 | requestDownloadBriefcase\(\_requestProps: RequestBriefcaseProps, \_downloadOptions: DownloadBriefcaseOptions, \_reportProgress: boolean\): Promise&lt;BriefcaseProps&gt; | 要求下载Briefcase。 该接口需要互联网连接，并且必须具有有效的令牌。 |
@@ -21,12 +21,14 @@
 | getBriefcases\(\): Promise&lt;BriefcaseProps\[\]&gt; | 获取以前要求下载或完全下载的所有Briefcase |
 | storageMgrOpen\(\_storageId: string\): Promise&lt;string&gt; |  |
 | storageMgrClose\(\_storageId: string, \_deleteIt: boolean\): Promise&lt;void&gt; |  |
-| storageMgrNames\(\): Promise&lt;string\[\]&gt;  |  |
+| storageMgrNames\(\): Promise&lt;string\[\]&gt; |  |
 | storageGet\(\_storageId: string, \_key: string\): Promise&lt;StorageValue \| undefined&gt; |  |
 | storageSet\(\_storageId: string, \_key: string, \_value: StorageValue\): Promise&lt;void&gt; |  |
-| storageRemove\(\_storageId: string, \_key: string\): Promise&lt;void&gt;  |  |
+| storageRemove\(\_storageId: string, \_key: string\): Promise&lt;void&gt; |  |
 | storageKeys\(\_storageId: string\): Promise&lt;string\[\]&gt; |  |
 | storageRemoveAll\(\_storageId: string\): Promise&lt;void&gt; |  |
+
+---
 
 # IModelReadRpcInterface
 
