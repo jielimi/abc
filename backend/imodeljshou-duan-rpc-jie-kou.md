@@ -49,9 +49,9 @@
 | 接口 | 描述 |
 | :---: | :---: |
 | openForRead\(\_iModelToken: IModelRpcProps\): Promise&lt;IModelConnectionProps&gt; |  |
-| close\(\_iModelToken: IModelRpcProps\): Promise&lt;boolean&gt; |  |
+| close\(\_iModelToken: IModelRpcProps\): Promise&lt;boolean&gt; | 关闭 |
 | queryRows\(\_iModelToken: IModelRpcProps, \_ecsql: string, \_bindings?: any\[\] \| object, \_limit?: QueryLimit, \_quota?: QueryQuota, \_priority?: QueryPriority\): Promise&lt;QueryResponse&gt; |  |
-| getModelProps\(\_iModelToken: IModelRpcProps, \_modelIds: Id64String\[\]\): Promise&lt;ModelProps\[\]&gt; |  |
+| getModelProps\(\_iModelToken: IModelRpcProps, \_modelIds: Id64String\[\]\): Promise&lt;ModelProps\[\]&gt; | 查询指定id的模型的属性。 |
 | queryModelRanges\(\_iModelToken: IModelRpcProps, \_modelIds: Id64String\[\]\): Promise&lt;Range3dProps\[\]&gt; |  |
 | queryModelProps\(\_iModelToken: IModelRpcProps, \_params: EntityQueryParams\): Promise&lt;ModelProps\[\]&gt; |  |
 | getElementProps\(\_iModelToken: IModelRpcProps, \_elementIds: Id64String\[\]\): Promise&lt;ElementProps\[\]&gt; |  |
