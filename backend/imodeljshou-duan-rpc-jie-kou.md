@@ -144,8 +144,8 @@
 | startModifyingElements\(IModelRpcProps, GuidString, Id64Array\) |  |
 | createElement\( IModelRpcProps, GuidString,  GeometricElement3dProps, Point3d,  YawPitchRollAngles,  any\) |  |
 | applyTransform\(IModelRpcProps, GuidString, TransformProps\) | 应用矩阵变换。 |
-| pushState\( IModelRpcProps,  GuidString\) |  |
-| popState\(IModelRpcProps, GuidString\) |  |
+| pushState\( IModelRpcProps,  GuidString\) | 添加 |
+| popState\(IModelRpcProps, GuidString\) | 删除 |
 
 ---
 
