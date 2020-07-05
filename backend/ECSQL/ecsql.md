@@ -64,10 +64,10 @@ ECSQL支持EC内置的所有原始类型。这意味着，除了SQL-92中的基�
 
 _备注:_
 
-_DATE 'yyyy-mm-dd'      
+_DATE 'yyyy-mm-dd'        
 _
 
-_TIMESTAMP 'yyyy-mm-dd hh:mm:ss\[.nnn\]\[Z\]'      
+_TIMESTAMP 'yyyy-mm-dd hh:mm:ss\[.nnn\]\[Z\]'        
 _
 
 _TIME 'hh:mm:ss\[.nnn\]'_
@@ -256,5 +256,5 @@ SELECT ECInstanceId,CodeValue,Parent FROM BisCore.Element WHERE Model=? LIMIT 50
 
 ### 空间查询和几何函数
 
-ECSQL可以执行空间查询,ECSQL具有许多内置的几何函数。
+ECSQL可以执行空间查询，ECSQL具有许多内置的几何函数。
 
