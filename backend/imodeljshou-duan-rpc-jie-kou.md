@@ -1,7 +1,5 @@
 # iModel.js后端RPC接口
 
-
-
 ### SnapshotIModelRpcInterface
 
 该接口用于snapshot \* iModels，且适用于桌面应用程序和移动产品。 不鼓励Web产品注册此接口。
@@ -77,11 +75,11 @@
 ### IModelWriteRpcInterface
 
 该接口用于写入iModel，所有操作都需要读写访问。  
-\(此接口通常不直接使用。 有关从前端访问iModel的更高级，更方便的API，请参见IModelConnection。  
-\)
+\(此接口通常不直接使用。 有关从前端访问iModel的更高级，更方便的API，请参见IModelConnection）
 
+| 接口 | 描述 |
+| :---: | :---: |
 | openForWrite\(\_iModelToken: IModelRpcProps\): Promise&lt;IModelConnectionProps&gt; |  |
-| :--- | :--- |
 | saveChanges\(\_iModelToken: IModelRpcProps, \_description?: string\): Promise&lt;void&gt; |  |
 | hasUnsavedChanges\(\_iModelToken: IModelRpcProps\): Promise&lt;boolean&gt; |  |
 | hasPendingTxns\(\_iModelToken: IModelRpcProps\): Promise&lt;boolean&gt; |  |
