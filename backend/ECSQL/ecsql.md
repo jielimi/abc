@@ -64,19 +64,21 @@ ECSQL支持EC内置的所有原始类型。这意味着，除了SQL-92中的基�
 
 _备注:_
 
-_DATE 'yyyy-mm-dd'_
+_DATE 'yyyy-mm-dd'  
+_
 
-_TIMESTAMP 'yyyy-mm-dd hh:mm:ss\[.nnn\]\[Z\]'_
+_TIMESTAMP 'yyyy-mm-dd hh:mm:ss\[.nnn\]\[Z\]'  
+_
 
 _TIME 'hh:mm:ss\[.nnn\]'_
 
 在ECSQL Point的上下文中，ECProperty解释为由以下系统属性组成的结构：
 
-X 	X Point2d或Point3d的坐标
+X     X Point2d或Point3d的坐标
 
-Y 	Y Point2d或Point3d的坐标
+Y     Y Point2d或Point3d的坐标
 
-Z 	Z Point3d的坐标
+Z     Z Point3d的坐标
 
 ---
 
@@ -89,7 +91,6 @@ SELECT ECInstanceId, Model, CodeValue FROM bis.ViewDefinition3d WHERE IsCameraOn
 //布尔属性或表达式不需要与True和False比较，因为它们已经返回了布尔值。 所以上面的例子也可以这样写：
 SELECT ECInstanceId, Model, CodeValue FROM bis.ViewDefinition3d WHERE IsCameraOn
 SELECT ECInstanceId, Model, CodeValue FROM bis.ViewDefinition3d WHERE NOT IsCameraOn
-
 ```
 
 ---
@@ -149,7 +150,6 @@ SELECT Location FROM myschema.Company WHERE Name='ACME'//整体返回Location st
 SELECT Name,Location.Street,Location.City FROM myschema.Company WHERE ECInstanceId=?//返回Location结构属性的Street和City成员
 SELECT Name FROM myschema.Company WHERE Location=?//返回与绑定的Location值匹配的行。 该位置必须作为一个整体进行绑定。
 SELECT Name FROM myschema.Company WHERE Location.Zip=12314//返回与位置的Zip成员值匹配的行
-
 ```
 
 Array示例:
@@ -162,6 +162,23 @@ Array示例:
 
 SELECT PhoneNumbers FROM myschema.Company WHERE Name='ACME'//返回ACME公司的PhoneNumbers数组
 SELECT Name FROM myschema.Company WHERE PhoneNumbers=?//返回与绑定的PhoneNumber数组匹配的公司。 该数组必须绑定为一个整体。
+```
+
+### 导航属性
+
+导航属性是指向相关对象的ECProperty.它们始终由ECRelationshipClass支持。在ECSQL的上下文中，导航属性被解释为由以下系统属性组成的结构：
+
+| 属性 | 描述 |
+| :---: | :--- |
+| Id | 相关实例的ECInstanceId |
+| RelECClassId | 支持导航属性的ECRelationshipClass的ECClassId。当ECRelationshipClass具有子类时,它与其相关。 |
+
+示例:
+
+```
+SELECT Parent FROM bis.Element WHERE ECInstanceId=?//整体返回Parent导航属性（包括Id和RelECClassId）
+SELECT Parent.Id FROM bis.Element WHERE ECInstanceId=?//仅返回父级导航属性的Id成员
+SELECT Parent.Id, Parent.RelECClassId FROM bis.Element WHERE ECInstanceId=?//ECInstanceId =？ 以两个单独的列的形式返回ID和Parent导航属性的RelECClassId成员
 ```
 
 
