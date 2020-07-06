@@ -26,7 +26,6 @@
   * [ECSchema](backend/ecschema/ecschema.md)
     * [Schema使用示例](backend/ecschema/chuang-jian-yu-shi-yong.md)
   * [ECSQL](backend/ECSQL/ecsql.md)
-    * [What is ECSQL?](backend/ECSQL/what-is-ecsql.md)
     * [执行ECSQL](backend/ECSQL/zhi-xing-ecsql.md)
     * [Code Examples](backend/ECSQL/code-examples.md)
     * [常用ECSQL查询](backend/ECSQL/frequently-used-ecsql-queries.md)
