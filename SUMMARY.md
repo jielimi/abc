@@ -2,14 +2,31 @@
 
 * [关于iModel.js](guan-yu-imodel-js.md)
 * [创建环境](README.md)
-  * [iModel Bridges](imodel-bridges.md)
+  * [安装iModel Bridges](imodel-bridges.md)
   * [常见问题](chang-jian-wen-ti.md)
-* [支持平台](zhi-chi-ping-tai.md)
-* [应用程序结构](ying-yong-cheng-xu-jie-gou.md)
-  * [前端](ying-yong-cheng-xu-jie-gou/qian-duan.md)
-    * [package](ying-yong-cheng-xu-jie-gou/qian-duan/package.md)
-  * [后端](ying-yong-cheng-xu-jie-gou/hou-duan.md)
-    * [package](ying-yong-cheng-xu-jie-gou/hou-duan/package.md)
+* [API](ying-yong-cheng-xu-jie-gou.md)
+  * [imodeljs-frontend](ying-yong-cheng-xu-jie-gou/qian-duan.md)
+    * [IModelApp](ying-yong-cheng-xu-jie-gou/qian-duan/package.md)
+      * [IModelAppOptions](ying-yong-cheng-xu-jie-gou/qian-duan/package/imodelappoptions.md)
+    * [IModelConnection](ying-yong-cheng-xu-jie-gou/qian-duan/imodelconnection.md)
+    * ElementState
+    * ModelState
+    * Tools
+    * Views
+    * LocatingElements
+    * AccuDraw
+    * Notifications
+    * Extensions
+    * Properties
+    * Rendering
+    * SelectionSet
+    * OIDC
+    * Utils
+    * Logging
+    * SpatialClassification    
+    * Tiles
+    * Authentication
+    * All
 * [ImodelWeb](imodelweb.md)
   * 项目管理
   * [版本管理](imodelweb/ban-ben-guan-li.md)
@@ -19,9 +36,6 @@
     * [本地模型](imodelweb/ben-di-mo-xing.md)
   * [基本功能](imodelweb/gong-neng.md)
   * [API](imodelweb/api.md)
-* [部署](bu-shu.md)
-* [Frontend](chapter1.md)
-  * [接口](chapter1/jie-kou.md)
 * [Backend](backend.md)
   * [ECSchema](backend/ecschema/ecschema.md)
     * [Schema使用示例](backend/ecschema/chuang-jian-yu-shi-yong.md)
