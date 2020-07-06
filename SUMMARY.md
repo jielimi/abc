@@ -2,7 +2,7 @@
 
 * [关于iModel.js](guan-yu-imodel-js.md)
 * [创建环境](README.md)
-  * [iModel Bridges](imodel-bridges.md)
+  * [安装iModel Bridges](imodel-bridges.md)
   * [常见问题](chang-jian-wen-ti.md)
 * [支持平台](zhi-chi-ping-tai.md)
 * [应用程序结构](ying-yong-cheng-xu-jie-gou.md)
