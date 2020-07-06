@@ -1,0 +1,2 @@
+imodeljs-frontend是在web浏览器中运行的web应用程序核心包。它包含查询imodel和显示视图的类。
+
