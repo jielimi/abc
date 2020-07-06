@@ -6,7 +6,27 @@
   * [常见问题](chang-jian-wen-ti.md)
 * [API](ying-yong-cheng-xu-jie-gou.md)
   * [imodeljs-frontend](ying-yong-cheng-xu-jie-gou/qian-duan.md)
-    * [package](ying-yong-cheng-xu-jie-gou/qian-duan/package.md)
+    * [IModelApp](ying-yong-cheng-xu-jie-gou/qian-duan/package.md)
+      * [IModelAppOptions](ying-yong-cheng-xu-jie-gou/qian-duan/package/imodelappoptions.md)
+    * IModelConnection
+    * ElementState
+    * ModelState
+    * Tools
+    * Views
+    * LocatingElements
+    * AccuDraw
+    * Notifications
+    * Extensions
+    * Properties
+    * Rendering
+    * SelectionSet
+    * OIDC
+    * Utils
+    * Logging
+    * SpatialClassification    
+    * Tiles
+    * Authentication
+    * All
 * [ImodelWeb](imodelweb.md)
   * 项目管理
   * [版本管理](imodelweb/ban-ben-guan-li.md)
