@@ -19,7 +19,7 @@
       * [DisplayStyles](ying-yong-cheng-xu-jie-gou/qian-duan/views/displaystyles.md)
     * [LocatingElements](ying-yong-cheng-xu-jie-gou/qian-duan/locatingelements.md)
     * [AccuDraw](ying-yong-cheng-xu-jie-gou/qian-duan/accudraw.md)
-    * Notifications
+    * [Notifications](ying-yong-cheng-xu-jie-gou/qian-duan/notifications.md)
     * Extensions
     * Properties
     * Rendering
