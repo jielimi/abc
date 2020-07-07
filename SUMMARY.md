@@ -23,7 +23,7 @@
     * [Extensions](ying-yong-cheng-xu-jie-gou/qian-duan/extensions.md)
     * [Properties](ying-yong-cheng-xu-jie-gou/qian-duan/properties.md)
     * [Rendering](ying-yong-cheng-xu-jie-gou/qian-duan/rendering.md)
-    * SelectionSet
+    * [SelectionSet](ying-yong-cheng-xu-jie-gou/qian-duan/selectionset.md)
     * [OIDC](ying-yong-cheng-xu-jie-gou/qian-duan/oidc.md)
     * Utils
     * Logging
