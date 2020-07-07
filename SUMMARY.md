@@ -20,11 +20,11 @@
     * [LocatingElements](ying-yong-cheng-xu-jie-gou/qian-duan/locatingelements.md)
     * [AccuDraw](ying-yong-cheng-xu-jie-gou/qian-duan/accudraw.md)
     * [Notifications](ying-yong-cheng-xu-jie-gou/qian-duan/notifications.md)
-    * Extensions
-    * Properties
-    * Rendering
+    * [Extensions](ying-yong-cheng-xu-jie-gou/qian-duan/extensions.md)
+    * [Properties](ying-yong-cheng-xu-jie-gou/qian-duan/properties.md)
+    * [Rendering](ying-yong-cheng-xu-jie-gou/qian-duan/rendering.md)
     * SelectionSet
-    * OIDC
+    * [OIDC](ying-yong-cheng-xu-jie-gou/qian-duan/oidc.md)
     * Utils
     * Logging
     * SpatialClassification    
