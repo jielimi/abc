@@ -11,7 +11,8 @@
     * [IModelConnection](ying-yong-cheng-xu-jie-gou/qian-duan/imodelconnection.md)
     * [ElementState](ying-yong-cheng-xu-jie-gou/qian-duan/elementstate.md)
     * [ModelState](ying-yong-cheng-xu-jie-gou/qian-duan/modelstate.md)
-    * Tools
+    * [Tools](ying-yong-cheng-xu-jie-gou/qian-duan/tools.md)
+      * [ToolRegistry](ying-yong-cheng-xu-jie-gou/qian-duan/tools/toolregistry.md)
     * Views
     * LocatingElements
     * AccuDraw
