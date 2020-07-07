@@ -8,7 +8,7 @@
   * [imodeljs-frontend](ying-yong-cheng-xu-jie-gou/qian-duan.md)
     * [IModelApp](ying-yong-cheng-xu-jie-gou/qian-duan/package.md)
       * [IModelAppOptions](ying-yong-cheng-xu-jie-gou/qian-duan/package/imodelappoptions.md)
-    * IModelConnection
+    * [IModelConnection](ying-yong-cheng-xu-jie-gou/qian-duan/imodelconnection.md)
     * ElementState
     * ModelState
     * Tools
