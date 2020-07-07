@@ -17,8 +17,8 @@
       * [Viewports](ying-yong-cheng-xu-jie-gou/qian-duan/views/viewports.md)
       * [ViewManager](ying-yong-cheng-xu-jie-gou/qian-duan/views/viewmanager.md)
       * [DisplayStyles](ying-yong-cheng-xu-jie-gou/qian-duan/views/displaystyles.md)
-    * LocatingElements
-    * AccuDraw
+    * [LocatingElements](ying-yong-cheng-xu-jie-gou/qian-duan/locatingelements.md)
+    * [AccuDraw](ying-yong-cheng-xu-jie-gou/qian-duan/accudraw.md)
     * Notifications
     * Extensions
     * Properties
