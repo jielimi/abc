@@ -25,8 +25,8 @@
     * [Rendering](ying-yong-cheng-xu-jie-gou/qian-duan/rendering.md)
     * [SelectionSet](ying-yong-cheng-xu-jie-gou/qian-duan/selectionset.md)
     * [OIDC](ying-yong-cheng-xu-jie-gou/qian-duan/oidc.md)
-    * Utils
-    * Logging
+    * [Utils](ying-yong-cheng-xu-jie-gou/qian-duan/utils.md)
+    * [Logging](ying-yong-cheng-xu-jie-gou/qian-duan/logging.md)
     * SpatialClassification    
     * Tiles
     * Authentication
