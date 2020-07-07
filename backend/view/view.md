@@ -4,7 +4,7 @@
 
 通过IModelDb.views即可访问该接口。
 
-其主要包含以下方法\(_**仅供参考，若需要了解更多，请查看相关源码，见文件IModelDb.d.ts或IModelDb.ts**_\):
+主要包含以下方法\(_**仅供参考，若需要了解更多，请查看相关源码，见文件IModelDb.d.ts或IModelDb.ts**_\):
 
 ---
 
@@ -17,7 +17,7 @@ iterateViews(params: ViewQueryParams, callback: (view: ViewDefinition) => boolea
 
 //查询指定的viewDefinitionId的ViewStateProps
  getViewStateData(viewDefinitionId: string): ViewStateProps;
- 
+
 //获取视图的缩略图。
 getThumbnail(viewDefinitionId: Id64String): ThumbnailProps | undefined;
 
