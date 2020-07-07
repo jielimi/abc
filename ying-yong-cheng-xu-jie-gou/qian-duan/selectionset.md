@@ -16,7 +16,7 @@
 | invert\(elem: Id64Arg\): boolean | 在SelectionSet中反转一组ID的状态 |
 | isSelected\(elemId?: Id64String\): boolean | 查询Id是否在选择集中。 |
 | remove\(elem: Id64Arg\): boolean | 从当前选择集中删除一个或多个ID。 |
-| replace\(elem: Id64Arg\): void	 | 将选择集更改为给定的ID集。 |
+| replace\(elem: Id64Arg\): void | 将选择集更改为给定的ID集。 |
 
 ##### Properties
 
@@ -27,6 +27,10 @@
 | isActive | boolean | 检查是否有任何选定的元素。 |
 | onChanged | BeEvent&lt;\(ev: SelectionSetEvent\) =&gt; void&gt; | 每当从此SelectionSet添加或删除元素时调用 |
 | size | number | 获取此选择集的条目数。 |
+
+### Defined in
+
+[core/frontend/src/SelectionSet.ts](https://github.com/imodeljs/imodeljs/tree/master/core/frontend/src/SelectionSet.ts#L227)
 
 
 
