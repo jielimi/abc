@@ -13,7 +13,10 @@
     * [ModelState](ying-yong-cheng-xu-jie-gou/qian-duan/modelstate.md)
     * [Tools](ying-yong-cheng-xu-jie-gou/qian-duan/tools.md)
       * [ToolRegistry](ying-yong-cheng-xu-jie-gou/qian-duan/tools/toolregistry.md)
-    * Views
+    * [Views](ying-yong-cheng-xu-jie-gou/qian-duan/views.md)
+      * [Viewports](ying-yong-cheng-xu-jie-gou/qian-duan/views/viewports.md)
+      * [ViewManager](ying-yong-cheng-xu-jie-gou/qian-duan/views/viewmanager.md)
+      * [DisplayStyles](ying-yong-cheng-xu-jie-gou/qian-duan/views/displaystyles.md)
     * LocatingElements
     * AccuDraw
     * Notifications
