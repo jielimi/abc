@@ -24,7 +24,7 @@ getThumbnail(viewDefinitionId: Id64String): ThumbnailProps | undefined;
 //保存视图的缩略图。
 saveThumbnail(viewDefinitionId: Id64String, thumbnail: ThumbnailProps): number;
 
-//设置iModel的默认视图属性
+//设置iModel的默认的视图属性
 setDefaultViewId(viewId: Id64String): void;
 ```
 
