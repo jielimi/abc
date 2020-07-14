@@ -33,14 +33,14 @@ viewport.displayStyle = style;
 | clearAlwaysDrawn\(\): void | 清除始终绘制的元素集。 |
 | clearNeverDrawn\(\): void | 清除从未绘制的元素集。 |
 | cssPixelsToDevicePixels\(cssPixels: number\): number | 使用此视口的设备像素比率将以CSS像素为单位的数字转换为设备像素。 |
-| determineVisibleDepthRange\(rect?: ViewRect, result?: DepthRangeNpc\): DepthRangeNpc \| undefined | 计算屏幕区域的npc深度值的范围。 |
+| determineVisibleDepthRange\(rect?: ViewRect, result?: DepthRangeNpc\): DepthRangeNpc | 计算屏幕区域的npc深度值的范围。 |
 | dispose\(\): void |  |
 | dropSubCategoryOverride\(id: Id64String\): void | 删除指定子类别的任何子类别覆盖。 |
 | getContrastToBackgroundColor\(\): ColorDef | 获取与此视口的当前背景色形成对比的颜色。 |
 | getFrustum\(sys: CoordSystem = CoordSystem.World, adjustedBox: boolean = true, box?: Frustum\): Frustum | 获取与指定坐标系中视口的8个角相对应的8点截锥。 |
 | getPixelSizeAtPoint\(point?: Point3d\): number | 获取世界坐标系中给定点处像素的宽度（视图坐标系中x方向的单位矢量），返回以米（世界单位）为单位的结果。 |
 | getSubCategoryAppearance\(id: Id64String\): SubCategoryAppearance | 查询属于特定子类别的几何体在此视口中渲染时使用的符号。 |
-| getSubCategoryOverride\(id: Id64String\): SubCategoryOverride \| undefined | 在此视口中渲染时，查询应用于属于特定子类别的几何体的符号替代。 |
+| getSubCategoryOverride\(id: Id64String\): SubCategoryOverride | 在此视口中渲染时，查询应用于属于特定子类别的几何体的符号替代。 |
 | getWorldFrustum\(box?: Frustum\): Frustum | 以世界坐标获取此视口的当前（未调整）视锥的副本。 |
 | invalidateDecorations\(\): void | 将当前的装饰集标记为无效，以便在下一个渲染帧上重新创建它们。 |
 | isSubCategoryVisible\(id: Id64String\): boolean | 确定属于特定子类别的几何图形是否在此视口中可见（假定显示包含的类别）。 |
@@ -50,7 +50,7 @@ viewport.displayStyle = style;
 | npcToWorldArray\(pts: Point3d\[\]\): void | 转换点数组协调系统。Npc到世界坐标系 |
 | overrideSubCategory\(id: Id64String, ovr: SubCategoryOverride\): void | 在该视口中渲染时，替代属于特定子类别的几何体的符号。 |
 | pixelsFromInches\(inches: number\): number | 根据屏幕DPI将英寸转换为像素。 |
-| readImage\(rect: ViewRect = new ViewRect\(0, 0, -1, -1\), targetSize: Point2d = Point2d.createZero\(\), flipVertically: boolean = false\): ImageBuffer \| undefined | 从当前视口中读取当前渲染系统中的图像。 |
+| readImage\(rect: ViewRect = new ViewRect\(0, 0, -1, -1\), targetSize: Point2d = Point2d.createZero\(\), flipVertically: boolean = false\): ImageBuffer | 从当前视口中读取当前渲染系统中的图像。 |
 | replaceViewedModels\(modelIds: Id64Arg\): Promise&lt;void&gt; | 如果该视口正在显示空间视图，请尝试替换当前由该视口查看的模型集 |
 | scroll\(screenDist: XAndY, options?: ViewChangeOptions\): void | 按给定的像素数滚动视图。 |
 | setAlwaysDrawn\(ids: Id64Set, exclusive: boolean = false\): void | 指定应始终在此视图中呈现的一组元素的ID，而不管类别和子类别的可见性如何。 |
@@ -60,7 +60,7 @@ viewport.displayStyle = style;
 | setStandardRotation\(id: StandardViewId\): void | 将此视口定向为标准视图的一个旋转。 |
 | setupFromView\(pose?: ViewPose\): ViewStatus | 根据ViewState中的当前信息建立此视口的参数 |
 | setupViewFromFrustum\(inFrustum: Frustum\): boolean | 调用视图.setupfromstum然后Viewport.setupFromView |
-| synchWithView\(\_options?: ViewChangeOptions \| boolean\): void | 调用Viewport.setupFromView然后应用可选行为。 |
+| synchWithView\(\_options\): void | 调用Viewport.setupFromView然后应用可选行为。 |
 | turnCameraOn\(lensAngle?: Angle\): ViewStatus | 如果相机当前处于关闭状态，将其打开。 |
 | updateChangeFlags\(newView: ViewState\): void Protected | 从finishUndoRedo、applyViewState和changeView调用，可能会根据当前和新ViewState之间的差异重新计算更改标志。 |
 | view4dToWorld\(input: Point4d, out?: Point3d\): Point3d | 从转换点坐标系视图作为4d点坐标系视图 |
@@ -76,13 +76,11 @@ viewport.displayStyle = style;
 | worldToView4d\(input: XYAndZ, out?: Point4d\): Point4d | 从转换点世界坐标系到坐标系视图作为4d点 |
 | worldToView4dArray\(worldPts: Point3d\[\], viewPts: Point4d\[\]\): void | 转换点数组世界坐标系到坐标系视图，如4ds点 |
 | worldToViewArray\(pts: Point3d\[\]\): void | 转换点数组世界坐标系到坐标系视图 |
-| zoom\(newCenter: Point3d \| undefined, factor: number, options?: ViewChangeOptions\): ViewStatus | 按比例因子缩放视图，将新中心放置在给定点（世界坐标）。  |
+| zoom\(newCenter, factor: number, options?: ViewChangeOptions\): ViewStatus | 按比例因子缩放视图，将新中心放置在给定点（世界坐标）。 |
 | zoomToElementProps\(elementProps: ElementProps\[\], options?: undefined\): void | 缩放视图以显示给定的一组ElementProps周围最紧的框。 |
 | zoomToElements\(ids: Id64Arg, options?: undefined\): Promise&lt;void&gt; | 缩放视图以显示给定元素集周围最紧的框。 |
 | zoomToPlacementProps\(placementProps: PlacementProps\[\], options?: undefined\): void | 缩放视图以显示给定PlacementProps集周围最紧的框。 |
-| zoomToVolume\(volume: LowAndHighXYZ \| LowAndHighXY, options?: ViewChangeOptions\): void | 将视图缩放到世界坐标系中的空间体积。 |
-
-
+| zoomToVolume\(volume, options?: ViewChangeOptions\): void | 将视图缩放到世界坐标系中的空间体积。 |
 
 ### Properties
 
@@ -97,8 +95,8 @@ viewport.displayStyle = style;
 | featureOverrideProvider | 可以自定义外观的对象视口。功能在视口中。 |
 | hilite | 控制如何在此视口中突出显示元素的设置。 |
 | iModel | 当前viewport的iModel |
-| isAlwaysDrawnExclusive  | 如果Viewport.alwaysDrawnset是此视图中唯一呈现的元素，返回ture |
-| isCameraOn  | 如果这是打开相机的三维视图，则为真。 |
+| isAlwaysDrawnExclusive | 如果Viewport.alwaysDrawnset是此视图中唯一呈现的元素，返回ture |
+| isCameraOn | 如果这是打开相机的三维视图，则为真。 |
 | isDisposed | 如果此视口Viewport.dispose方法已被调用。 |
 | isFadeOutActive | 启用或禁用“淡出”模式。 |
 | isGridOn | 确定当前是否在此视口中启用栅格显示。 |
@@ -119,18 +117,14 @@ viewport.displayStyle = style;
 | onViewedModelsChanged | 此视口显示的模型集更改后在下一帧调用的事件。 |
 | rotation | 此视口的旋转矩阵。 |
 | solarShadowSettings | 控制此视口的阴影显示的设置。 |
-| undoDelay  | 不允许视图撤消缓冲区中的条目，除非它们之间的间隔超过此时间量。 |
-| view | 此视口的ViewState  |
+| undoDelay | 不允许视图撤消缓冲区中的条目，除非它们之间的间隔超过此时间量。 |
+| view | 此视口的ViewState |
 | viewDelta | 此视口范围的对角之间的向量。 |
 | viewFlags | 确定如何渲染此视口内容的ViewFlags。 |
-| viewRect  | 获取此视口的矩形坐标系视图协调。 |
-| worldToViewMap  | 提供世界坐标和视图坐标之间的转换。 |
+| viewRect | 获取此视口的矩形坐标系视图协调。 |
+| worldToViewMap | 提供世界坐标和视图坐标之间的转换。 |
 
 ### Defined in
 
 [core/frontend/src/Viewport.ts](https://github.com/imodeljs/imodeljs/tree/master/core/frontend/src/Viewport.ts#L744)
-
-
-
-
 
