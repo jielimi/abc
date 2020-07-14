@@ -126,5 +126,7 @@ viewport.displayStyle = style;
 
 ### Defined in
 
-[core/frontend/src/Viewport.ts](https://github.com/imodeljs/imodeljs/tree/master/core/frontend/src/Viewport.ts#L744)hhh
+[core/frontend/src/Viewport.t](https://github.com/imodeljs/imodeljs/tree/master/core/frontend/src/Viewport.ts#L744)s
+
+
 
